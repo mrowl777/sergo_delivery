@@ -14,7 +14,7 @@ function init(){
     input.fadeOut(500);
   });
 
-  input.addEventListener('keyup', function ( e ) {
+  $( input ).on( 'keyup', function keyup( e ) {
     if( e.keyCode == 13 ){
       alert(input.val());
     }
