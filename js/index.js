@@ -8,8 +8,8 @@ $(document).ready(function(){
       $('select[name=sender_addr]').hide();
     }else{
       $('input[name=sender_addr_man]').hide();
-      var selected_city = $('select[name=city_selector_sender]:checked').val();
-      console.log('city_selector_sender', selected_city);
+      var selected_city = $('input[name=city_selector_sender]:checked').val();
+      console.log($('input[name=city_selector_sender]:checked'));
       if( selected_city == '1' ){
         $('.sndr[city=MSK]').hide();
       }else{
@@ -21,8 +21,8 @@ $(document).ready(function(){
       $('select[name=recipient_addr]').hide();
     }else{
       $('input[name=recipient_addr_man]').hide();
-      var recipient_city = $('select[name=city_selector_recipient]:checked').val();
-      console.log('city_selector_recipient', recipient_city);
+      var recipient_city = $('input[name=city_selector_recipient]:checked').val();
+      console.log($('input[name=city_selector_sender]:checked'));
 
       if( recipient_city == '1' ){
         $('.rcpnt[city=MSK]').hide();
