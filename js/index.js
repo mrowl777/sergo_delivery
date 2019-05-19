@@ -10,11 +10,11 @@ $(document).ready(function(){
       $('input[name=sender_addr_man]').hide();
       var selected_city = $('input[name=city_selector_sender]:checked').val();
       console.log('city_selector_sender', selected_city);
-      // if( selected_city == '1' ){
-      //   $('.sndr[city=MSK]').hide();
-      // }else{
-      //   $('.sndr[city=SPB]').hide();
-      // }
+      if( selected_city == '1' ){
+        $('.sndr[city=MSK]').hide();
+      }else{
+        $('.sndr[city=SPB]').hide();
+      }
     }
 
     if( recipient_type == '1' ){
@@ -24,11 +24,11 @@ $(document).ready(function(){
       var recipient_city = $('input[name=city_selector_recipient]:checked').val();
       console.log('city_selector_recipient', recipient_city);
 
-      // if( recipient_city == '1' ){
-      //   $('.rcpnt[city=MSK]').hide();
-      // }else{
-      //   $('.rcpnt[city=SPB]').hide();
-      // }
+      if( recipient_city == '1' ){
+        $('.rcpnt[city=MSK]').hide();
+      }else{
+        $('.rcpnt[city=SPB]').hide();
+      }
     }
     
   });
