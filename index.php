@@ -45,6 +45,7 @@ mysqli_close( $mysqli );
         <li>Шаг 2</li>
         <li>Шаг 3</li>
         <li>Шаг 4</li>
+        <li>Звершение</li>
       </ul>
       <form class="form-wrapper">
         <fieldset class="section is-active">
