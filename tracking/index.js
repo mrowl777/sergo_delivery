@@ -13,6 +13,12 @@ function init(){
     close_button.fadeOut(500);
     input.fadeOut(500);
   });
+
+  input.addEventListener('keyup', function ( e ) {
+    if( e.keyCode == 13 ){
+      alert(input.val());
+    }
+  });
 }
 
 
