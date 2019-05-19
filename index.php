@@ -1,3 +1,34 @@
+<?php
+$db_name = 'u76899_staff';
+$db_host = 'localhost';
+$db_user = 'u76899';
+$db_pass = '3R3MTvbpeJNYiuq';
+
+
+$mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
+if ($mysqli->connect_errno) {
+    echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+$mysqli->query("set names utf8");
+
+$query = "SELECT * FROM `departs`";
+$departs = $db_helper->query( $query );
+
+$depataments = [];
+
+while ($row = $departs->fetch_assoc()) {
+  $depataments[] = array(
+      'id' => $row["id"],
+      'city' => $row["city"],
+      'address' => $row["address"],
+  );
+}
+
+mysqli_close( $mysqli );
+?>
+
+
 <html >
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -63,6 +94,14 @@
               </label>
             </div>
           </div>
+          <div class="button deltype">Дальше</div>
+        </fieldset>
+
+        <fieldset class="section">
+          <h3>Получатель</h3>
+          <input type="text" name="sender_addr" id="sender_addr" placeholder="Адрес отправителя">
+          <input type="text" name="recipient_addr" id="recipient_addr" placeholder="Адрес получателя">
+          
           <div class="button">Дальше</div>
         </fieldset>
         
