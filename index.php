@@ -12,8 +12,7 @@ if ($mysqli->connect_errno) {
 }
 $mysqli->query("set names utf8");
 
-$query = "SELECT * FROM `departs`";
-$departs = $db_helper->query( $query );
+$departs = $mysqli->query( "SELECT * FROM `departs`" );
 
 $depataments = [];
 
