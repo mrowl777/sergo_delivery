@@ -15,19 +15,31 @@
     <div class="container">
     <div class="wrapper">
       <ul class="steps">
-        <li class="is-active">Step 1</li>
-        <li>Step 2</li>
-        <li>Step 3</li>
+        <li class="is-active">Шаг 1</li>
+        <li>Шаг 2</li>
+        <li>Шаг 3</li>
       </ul>
       <form class="form-wrapper">
         <fieldset class="section is-active">
-          <h3>Your Details</h3>
-          <input type="text" name="name" id="name" placeholder="Name">
-          <input type="text" name="email" id="email" placeholder="Email">
-          <div class="button">Next</div>
+          <h3>Отправитель</h3>
+          <input type="text" name="l_name" id="l_name" placeholder="Фамилия">
+          <input type="text" name="f_name" id="f_name" placeholder="Имя">
+          <input type="text" name="s_name" id="s_name" placeholder="Отчество">
+          <input type="text" name="pass" id="pass" placeholder="Серия номер паспорта">
+          <input type="text" name="city" id="city" placeholder="Город">
+          <div class="button">Дальше</div>
         </fieldset>
         <fieldset class="section">
-          <h3>Account Type</h3>
+          <h3>Получатель</h3>
+          <input type="text" name="l_name" id="l_name" placeholder="Фамилия">
+          <input type="text" name="f_name" id="f_name" placeholder="Имя">
+          <input type="text" name="s_name" id="s_name" placeholder="Отчество">
+          <input type="text" name="city" id="city" placeholder="Город">
+          <input type="text" name="phone" id="phone" placeholder="Телефон">
+          <!-- <input class="submit button" type="submit" value="Sign Up"> -->
+        </fieldset>
+        <fieldset class="section">
+          <h3>Посылка</h3>
           <div class="row cf">
             <div class="four col">
               <input type="radio" name="r1" id="r1" checked>
@@ -48,12 +60,7 @@
           </div>
           <div class="button">Next</div>
         </fieldset>
-        <fieldset class="section">
-          <h3>Choose a Password</h3>
-          <input type="password" name="password" id="password" placeholder="Password">
-          <input type="password" name="password2" id="password2" placeholder="Re-enter Password">
-          <input class="submit button" type="submit" value="Sign Up">
-        </fieldset>
+        
         <fieldset class="section">
           <h3>Account Created!</h3>
           <p>Your account has now been created.</p>
