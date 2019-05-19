@@ -110,6 +110,7 @@ mysqli_close( $mysqli );
           <select class="addr_selector" name="sender_addr">
           <?php
             foreach( $depataments as $each ){
+              echo '<option disabled selected>Выберите адрес</option>';
               echo "<option class='sndr' value='".$each['id']."' city='".$each['city']."'>".$each['address']."</option>";
             }
           ?>
@@ -119,6 +120,7 @@ mysqli_close( $mysqli );
           <select class="addr_selector" name="recipient_addr">
             <?php
               foreach( $depataments as $each ){
+                echo '<option disabled selected>Выберите адрес</option>';
                 echo "<option class='rcpnt' value='".$each['id']."' city='".$each['city']."'>".$each['address']."</option>";
               }
             ?>
