@@ -131,9 +131,29 @@ mysqli_close( $mysqli );
         </fieldset>
         
         <fieldset class="section">
-          <h3>Account Created!</h3>
-          <p>Your account has now been created.</p>
-          <div class="button">Reset Form</div>
+
+          <div>
+            <h2>Отправитель</h2>
+            <p id="result_sender_fio">ФИО: </p>
+            <p id="result_sender_city">ГОРОД: </p>
+            <p id="result_sender_address">Адрес: </p>
+            <p id="result_sender_del_type">Доставка: </p>
+            <p></p>
+            <p></p>
+          </div>
+
+          <div>
+            <h2>Получатель</h2>
+            <p id="result_recipient_fio">ФИО: </p>
+            <p id="result_recipient_city">ГОРОД: </p>
+            <p id="result_recipient_phone">ТЕЛЕФОН: </p>
+            <p id="result_recipient_address">Адрес: </p>
+            <p id="result_recipient_del_type"></p>
+            <p></p>
+          </div>
+
+          <div class="button done">Все верно</div>
+          <div class="button">Начать с начала</div>
         </fieldset>
       </form>
     </div>

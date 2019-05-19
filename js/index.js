@@ -61,22 +61,39 @@ $(document).ready(function(){
       recipient_addr = $('.rcvr_addr').val();
     }
 
-    console.log('sender_first_name', sender_first_name);
-    console.log('sender_last_name', sender_last_name);
-    console.log('sender_surname', sender_surname);
-    console.log('sender_pass', sender_pass);
-    console.log('sender_city', sender_city);
-    console.log('recipient_first_name', recipient_first_name);
-    console.log('recipient_last_name', recipient_last_name);
-    console.log('recipient_surname', recipient_surname);
-    console.log('recipient_phone',recipient_phone );
-    console.log('recipient_city', recipient_city);
-    console.log('sender_delivery_type', sender_delivery_type);
-    console.log('recipient_delivery_type', recipient_delivery_type);
-    console.log('sender_addr', sender_addr);
-    console.log('recipient_addr', recipient_addr);
-    console.log('sender_addr_title', sender_addr_title);
-    console.log('recipient_addr_title', recipient_addr_title);
+
+    var sender_fio = sender_last_name + " " + sender_first_name + " " + sender_surname;
+    var recipient_fio = recipient_last_name + " " + recipient_first_name + " " + recipient_surname;
+
+    $('#result_sender_fio').text($(this).text() + " " + sender_fio);
+    $('#result_recipient_fio').text($(this).text() + " " + result_recipient_fio);
+    $('#result_sender_city').text($(this).text() + " " + sender_city);
+    $('#result_recipient_city').text($(this).text() + " " + recipient_city);
+    $('#result_recipient_phone').text($(this).text() + " " + recipient_phone);
+    if(sender_addr_title && sender_addr_title !== '' ){
+      $('#result_sender_address').text($(this).text() + " " + sender_addr_title);
+    }else{
+      $('#result_sender_address').text($(this).text() + " " + sender_addr);
+    }
+
+    if(recipient_addr_title && recipient_addr_title !== '' ){
+      $('#result_sender_address').text($(this).text() + " " + recipient_addr_title);
+    }else{
+      $('#result_recipient_address').text($(this).text() + " " + recipient_addr);
+    }
+
+
+    if( sender_delivery_type == "1"){
+      $('#result_sender_del_type').text($(this).text() + " самостоятельно на точку приема посылок");
+    }else{
+      $('#result_sender_del_type').text($(this).text() + " курьер свяжется для согласования времени");
+    }
+
+    if( recipient_delivery_type == "1"){
+      $('#result_sender_del_type').text($(this).text() + " забирает самостоятельно на точке приема посылок");
+    }else{
+      $('#result_sender_del_type').text($(this).text() + " курьер свяжется для согласования времени");
+    }
 
   });
 
