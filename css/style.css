@@ -254,6 +254,6 @@ fieldset{
   margin-right: 10px;
 }
 .done{
-  left: 22px;
-  right: 75%;
+  left: 22px !important;
+  right: 75% !important;
 }
