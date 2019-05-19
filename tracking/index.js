@@ -1,5 +1,5 @@
 
-var search_button = $('.icon-search'),
+var search_button = $('.search'),
     close_button  = $('.icon-times'),
     input = $('.input');
 search_button.on('click',function(){
