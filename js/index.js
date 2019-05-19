@@ -5,6 +5,19 @@ $(document).ready(function(){
 
     console.log(sender_type);
     console.log(recipient_type);
+
+    if( sender_type == '1' ){
+      $('.sender_addr').hide();
+    }else{
+      $('.sender_addr_man').hide();
+    }
+
+    if( recipient_type == '1' ){
+      $('.recipient_add').hide();
+    }else{
+      $('.recipient_addr_man').hide();
+    }
+    
   });
 
   $(".form-wrapper .button").click(function(){

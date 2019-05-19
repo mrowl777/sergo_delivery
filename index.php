@@ -100,8 +100,8 @@ mysqli_close( $mysqli );
 
         <fieldset class="section">
           <h3>Получатель</h3>
-          <input type="text" name="sender_addr" id="sender_addr" placeholder="Адрес отправителя">
-          <input type="text" name="recipient_addr" id="recipient_addr" placeholder="Адрес получателя">
+          <input type="text" name="sender_addr_man" id="sender_addr" placeholder="Адрес отправителя">
+          <input type="text" name="recipient_addr_man" id="recipient_addr" placeholder="Адрес получателя">
           
           <select class="addr_selector" name="sender_addr">
           <?php
