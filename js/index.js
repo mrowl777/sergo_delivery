@@ -7,15 +7,15 @@ $(document).ready(function(){
     console.log(recipient_type);
 
     if( sender_type == '1' ){
-      $('.sender_addr').hide();
+      $('select[name=sender_addr]').hide();
     }else{
-      $('.sender_addr_man').hide();
+      $('input[name=sender_addr_man]').hide();
     }
 
     if( recipient_type == '1' ){
-      $('.recipient_add').hide();
+      $('select[name=recipient_add]').hide();
     }else{
-      $('.recipient_addr_man').hide();
+      $('input[name=recipient_addr_man]').hide();
     }
     
   });
