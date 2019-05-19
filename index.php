@@ -35,7 +35,6 @@
           <div class="button">Дальше</div>
         </fieldset>
         <fieldset class="section">
-          <h3>Посылка</h3>
           Отправитель:
           <div class="row cf">
             <div class="four col">
