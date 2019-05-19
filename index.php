@@ -54,12 +54,12 @@
             <div class="four col">
               <input type="radio" name="recipient_type" id="d1" checked>
               <label for="d1">
-                <h4>Привезу в пункт приема</h4>
+                <h4>Забирает в пункте приема</h4>
               </label>
             </div>
             <div class="four col">
               <input type="radio" name="recipient_type" id="d2"><label for="d2">
-                <h4>Вызвать курьера</h4>
+                <h4>Курьером до двери</h4>
               </label>
             </div>
           </div>
