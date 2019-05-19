@@ -54,8 +54,8 @@ mysqli_close( $mysqli );
           <input type="text" name="s_name" id="s_name" placeholder="Отчество">
           <input type="text" name="pass" id="pass" placeholder="Серия номер паспорта">
           <select class="addr_selector" name="city_selector_sender">
-            <option value='1'>Санкт-Петербург</option>;
-            <option value='2'>Москва</option>;
+            <option value='1'>Санкт-Петербург</option>
+            <option value='2'>Москва</option>
           </select>
           <div class="button">Дальше</div>
         </fieldset>
@@ -65,8 +65,8 @@ mysqli_close( $mysqli );
           <input type="text" name="f_name" id="f_name" placeholder="Имя">
           <input type="text" name="s_name" id="s_name" placeholder="Отчество">
           <select class="addr_selector" name="city_selector_recipient">
-            <option value='1'>Санкт-Петербург</option>;
-            <option value='2'>Москва</option>;
+            <option value='1'>Санкт-Петербург</option>
+            <option value='2'>Москва</option>
           </select>
           <input type="text" name="phone" id="phone" placeholder="Телефон">
           <div class="button">Дальше</div>
