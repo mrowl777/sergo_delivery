@@ -52,12 +52,12 @@ $(document).ready(function(){
     var recipient_addr = $('input[name=recipient_addr_man]').val();
 
     if(!sender_addr || sender_addr == ''){
-      var sender_addr_title = $('.sndr_addr:checked').text();
+      var sender_addr_title = $('.sndr_addr option:selected').text();
       sender_addr = $('.sndr_addr').val();
     }
 
     if(!recipient_addr || recipient_addr == ''){
-      var recipient_addr_title = $('.rcvr_addr:checked').text();
+      var recipient_addr_title = $('.rcvr_addr option:selected').text();
       recipient_addr = $('.rcvr_addr').val();
     }
 
