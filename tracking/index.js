@@ -1,6 +1,6 @@
 
-var search_button = $('.fa-search'),
-    close_button  = $('.close'),
+var search_button = $('.icon-search'),
+    close_button  = $('.icon-times'),
     input = $('.input');
 search_button.on('click',function(){
   $(this).parent().addClass('open');
