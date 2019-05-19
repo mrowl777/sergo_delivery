@@ -77,7 +77,7 @@ $(document).ready(function(){
     }
 
     if(recipient_addr_title && recipient_addr_title !== '' ){
-      $('#result_sender_address').text($('#result_sender_address').text() + " " + recipient_addr_title);
+      $('#result_recipient_address').text($('#result_recipient_address').text() + " " + recipient_addr_title);
     }else{
       $('#result_recipient_address').text($('#result_recipient_address').text() + " " + recipient_addr);
     }
