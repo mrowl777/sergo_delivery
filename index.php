@@ -32,6 +32,7 @@
           <input type="text" name="city" id="city" placeholder="Город">
           <input type="text" name="phone" id="phone" placeholder="Телефон">
           <!-- <input class="submit button" type="submit" value="Sign Up"> -->
+          <div class="button">Дальше</div>
         </fieldset>
         <fieldset class="section">
           <h3>Посылка</h3>
