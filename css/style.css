@@ -253,3 +253,7 @@ fieldset{
 .track h4{
   margin-right: 10px;
 }
+.done{
+  left: 22px;
+  right: 75%;
+}
