@@ -36,21 +36,31 @@
         </fieldset>
         <fieldset class="section">
           <h3>Посылка</h3>
+          Отправитель:
           <div class="row cf">
             <div class="four col">
-              <input type="radio" name="r1" id="r1" checked>
+              <input type="radio" name="sender_type" id="r1" checked>
               <label for="r1">
-                <h4>Designer</h4>
+                <h4>Привезу в пункт приема</h4>
               </label>
             </div>
             <div class="four col">
-              <input type="radio" name="r1" id="r2"><label for="r2">
-                <h4>Developer</h4>
+              <input type="radio" name="sender_type" id="r2"><label for="r2">
+                <h4>Вызвать курьера</h4>
+              </label>
+            </div>
+          </div>
+          Получатель: 
+          <div class="row cf">
+            <div class="four col">
+              <input type="radio" name="recipient_type" id="d1" checked>
+              <label for="d1">
+                <h4>Привезу в пункт приема</h4>
               </label>
             </div>
             <div class="four col">
-              <input type="radio" name="r1" id="r3"><label for="r3">
-                <h4>Project Manager</h4>
+              <input type="radio" name="recipient_type" id="d2"><label for="d2">
+                <h4>Вызвать курьера</h4>
               </label>
             </div>
           </div>
