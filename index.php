@@ -103,7 +103,7 @@ mysqli_close( $mysqli );
           <input type="text" name="sender_addr" id="sender_addr" placeholder="Адрес отправителя">
           <input type="text" name="recipient_addr" id="recipient_addr" placeholder="Адрес получателя">
           
-          <select name="sender_addr">
+          <select class="addr_selector" name="sender_addr">
           <?php
             foreach( $depataments as $each ){
               echo "<option value='".$id."'>".$each['address']."</option>";
@@ -111,7 +111,7 @@ mysqli_close( $mysqli );
           ?>
           </select>
 
-          <select name="recipient_addr">
+          <select class="addr_selector" name="recipient_addr">
             <?php
               foreach( $depataments as $each ){
                 echo "<option value='".$id."'>".$each['address']."</option>";
