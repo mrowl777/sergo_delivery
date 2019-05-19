@@ -16,7 +16,6 @@ function init(){
 
   $( input ).on( 'keyup', function keyup( e ) {
     if( e.keyCode == 13 ){
-      e.preventDefault();
       alert(input.val());
     }
   });
