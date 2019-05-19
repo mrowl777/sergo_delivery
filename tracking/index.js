@@ -1,7 +1,8 @@
 
-var search_button = $('.search'),
+var search_button = $('.icon-search'),
     close_button  = $('.icon-times'),
     input = $('.input');
+    console.log(search_button);
 search_button.on('click',function(){
   console.log('clc');
   $(this).parent().addClass('open');
