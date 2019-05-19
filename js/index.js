@@ -18,7 +18,7 @@ $(document).ready(function(){
     }
 
     if( recipient_type == '1' ){
-      $('select[name=recipient_add]').hide();
+      $('select[name=recipient_addr]').hide();
     }else{
       $('input[name=recipient_addr_man]').hide();
       var recipient_city = $('input[name=city_selector_recipient]:checked').val();
