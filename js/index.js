@@ -9,7 +9,7 @@ $(document).ready(function(){
     }else{
       $('input[name=sender_addr_man]').hide();
       var selected_city = $('input[name=city_selector_sender]:checked').val();
-      console.log($('input[name=city_selector_sender]:checked'));
+      console.log($('input[name=city_selector_sender]'));
       if( selected_city == '1' ){
         $('.sndr[city=MSK]').hide();
       }else{
@@ -22,7 +22,7 @@ $(document).ready(function(){
     }else{
       $('input[name=recipient_addr_man]').hide();
       var recipient_city = $('input[name=city_selector_recipient]:checked').val();
-      console.log($('input[name=city_selector_sender]:checked'));
+      console.log($('input[name=city_selector_sender]'));
 
       if( recipient_city == '1' ){
         $('.rcpnt[city=MSK]').hide();
