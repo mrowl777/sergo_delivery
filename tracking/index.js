@@ -1,10 +1,8 @@
 function init(){
   var search_button = $('.icon-search'),
-    close_button  = $('.icon-times'),
+    close_button  = $('.close'),
     input = $('.input');
-  console.log(search_button);
   search_button.on('click',function(){
-    console.log('clc');
     $(this).parent().addClass('open');
     close_button.fadeIn(500);
     input.fadeIn(500);
