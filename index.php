@@ -54,7 +54,7 @@
               </label>
             </div>
           </div>
-          <div class="button">Next</div>
+          <div class="button">Дальше</div>
         </fieldset>
         
         <fieldset class="section">
