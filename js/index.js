@@ -4,7 +4,7 @@ $(document).ready(function(){
     var recipient_type = $('input[name=recipient_type]:checked').val();
 
 
-    if( sender_type == '1' ){
+    if( sender_type == '2' ){
       $('select[name=sender_addr]').hide();
     }else{
       $('input[name=sender_addr_man]').hide();
@@ -17,7 +17,7 @@ $(document).ready(function(){
       }
     }
 
-    if( recipient_type == '1' ){
+    if( recipient_type == '2' ){
       $('select[name=recipient_addr]').hide();
     }else{
       $('input[name=recipient_addr_man]').hide();
