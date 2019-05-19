@@ -37,10 +37,11 @@ mysqli_close( $mysqli );
 </head>
 
 <body>
+
     <div class="container">
     <div class="wrapper">
       <ul class="steps">
-        <li class="is-active">Шаг 1</li><?php echo $depataments[0]['city']; ?>
+        <li class="is-active">Шаг 1</li>
         <li>Шаг 2</li>
         <li>Шаг 3</li>
       </ul>
@@ -101,6 +102,22 @@ mysqli_close( $mysqli );
           <input type="text" name="sender_addr" id="sender_addr" placeholder="Адрес отправителя">
           <input type="text" name="recipient_addr" id="recipient_addr" placeholder="Адрес получателя">
           
+          <select name="sender_addr">
+          <?php
+            foreach( $depataments as $each ){
+              echo "<option value='".$id."'>".$each['address']."</option>";
+            }
+          ?>
+          </select>
+
+          <select name="recipient_addr">
+            <?php
+              foreach( $depataments as $each ){
+                echo "<option value='".$id."'>".$each['address']."</option>";
+              }
+            ?>
+          </select>
+
           <div class="button">Дальше</div>
         </fieldset>
         
