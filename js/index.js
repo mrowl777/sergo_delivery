@@ -10,12 +10,24 @@ $(document).ready(function(){
       $('select[name=sender_addr]').hide();
     }else{
       $('input[name=sender_addr_man]').hide();
+      var selected_city = $('select[name=city_selector_sender]:checked').val();
+      if( selected_city == '1' ){
+        $('.sndr[city=MSK]').hide();
+      }else{
+        $('.sndr[city=SPB]').hide();
+      }
     }
 
     if( recipient_type == '1' ){
       $('select[name=recipient_add]').hide();
     }else{
       $('input[name=recipient_addr_man]').hide();
+      var selected_city = $('select[name=city_selector_recipient]:checked').val();
+      if( selected_city == '1' ){
+        $('.rcpnt[city=MSK]').hide();
+      }else{
+        $('.rcpnt[city=SPB]').hide();
+      }
     }
     
   });

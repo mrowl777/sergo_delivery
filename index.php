@@ -53,7 +53,11 @@ mysqli_close( $mysqli );
           <input type="text" name="f_name" id="f_name" placeholder="Имя">
           <input type="text" name="s_name" id="s_name" placeholder="Отчество">
           <input type="text" name="pass" id="pass" placeholder="Серия номер паспорта">
-          <input type="text" name="city" id="city" placeholder="Город">
+          <!-- <input type="text" name="city" id="city" placeholder="Город"> -->
+          <select class="addr_selector" name="city_selector_sender">
+            <option value='1'>Санкт-Петербург</option>;
+            <option value='2'>Москва</option>;
+          </select>
           <div class="button">Дальше</div>
         </fieldset>
         <fieldset class="section">
@@ -61,7 +65,11 @@ mysqli_close( $mysqli );
           <input type="text" name="l_name" id="l_name" placeholder="Фамилия">
           <input type="text" name="f_name" id="f_name" placeholder="Имя">
           <input type="text" name="s_name" id="s_name" placeholder="Отчество">
-          <input type="text" name="city" id="city" placeholder="Город">
+          <!-- <input type="text" name="city" id="city" placeholder="Город"> -->
+          <select class="addr_selector" name="city_selector_recipient">
+            <option value='1'>Санкт-Петербург</option>;
+            <option value='2'>Москва</option>;
+          </select>
           <input type="text" name="phone" id="phone" placeholder="Телефон">
           <!-- <input class="submit button" type="submit" value="Sign Up"> -->
           <div class="button">Дальше</div>
@@ -101,20 +109,20 @@ mysqli_close( $mysqli );
         <fieldset class="section">
           <h3>Получатель</h3>
           <input type="text" name="sender_addr_man" id="sender_addr" placeholder="Адрес отправителя">
-          <input type="text" name="recipient_addr_man" id="recipient_addr" placeholder="Адрес получателя">
           
           <select class="addr_selector" name="sender_addr">
           <?php
             foreach( $depataments as $each ){
-              echo "<option value='".$each['id']."' city='".$each['city']."'>".$each['address']."</option>";
+              echo "<option class='sndr' value='".$each['id']."' city='".$each['city']."'>".$each['address']."</option>";
             }
           ?>
           </select>
 
+          <input type="text" name="recipient_addr_man" id="recipient_addr" placeholder="Адрес получателя">
           <select class="addr_selector" name="recipient_addr">
             <?php
               foreach( $depataments as $each ){
-                echo "<option value='".$each['id']."' city='".$each['city']."'>".$each['address']."</option>";
+                echo "<option class='rcpnt' value='".$each['id']."' city='".$each['city']."'>".$each['address']."</option>";
               }
             ?>
           </select>
