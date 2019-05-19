@@ -52,12 +52,12 @@ $(document).ready(function(){
     var recipient_addr = $('input[name=recipient_addr_man]').val();
 
     if(!sender_addr || sender_addr == ''){
-      sender_addr_title = $('input[name=sender_addr]:checked').text();
+      var sender_addr_title = $('input[name=sender_addr]:checked').text();
       sender_addr = $('input[name=sender_addr]:checked').val();
     }
 
     if(!recipient_addr || recipient_addr == ''){
-      recipient_addr_title = $('input[name=recipient_addr]:checked').text();
+      var recipient_addr_title = $('input[name=recipient_addr]:checked').text();
       recipient_addr = $('input[name=sender_addr]:checked').val();
     }
 
