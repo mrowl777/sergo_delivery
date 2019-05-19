@@ -1,4 +1,12 @@
 $(document).ready(function(){
+  $('.deltype').click(function(){
+    var sender_type = $('input[name=sender_type]:checked').val();
+    var recipient_type = $('input[name=recipient_type]:checked').val();
+
+    console.log(sender_type);
+    console.log(recipient_type);
+  });
+
   $(".form-wrapper .button").click(function(){
     var button = $(this);
     var currentSection = button.parents(".section");

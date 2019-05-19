@@ -232,7 +232,7 @@ fieldset{
 }
 
 .deltype{
-  bottom: 5;
+  bottom: 5 !important;
 }
 .addr_selector{
   display: block;
