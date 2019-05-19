@@ -58,6 +58,7 @@ mysqli_close( $mysqli );
             <option value='1'>Санкт-Петербург</option>
             <option value='2'>Москва</option>
           </select>
+          <div> <h4>Уже отправили посылку?</h4> <a href="/tracking">Отследить</a> </div>
           <div class="button">Дальше</div>
         </fieldset>
         <fieldset class="section">
