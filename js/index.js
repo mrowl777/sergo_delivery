@@ -90,9 +90,9 @@ $(document).ready(function(){
     }
 
     if( recipient_delivery_type == "1"){
-      $('#result_sender_del_type').text($('#result_sender_del_type').text() + " забирает самостоятельно на точке приема посылок");
+      $('#result_recipient_del_type').text($('#result_recipient_del_type').text() + " забирает самостоятельно на точке приема посылок");
     }else{
-      $('#result_sender_del_type').text($('#result_sender_del_type').text() + " курьер свяжется для согласования времени");
+      $('#result_recipient_del_type').text($('#result_recipient_del_type').text() + " курьер свяжется для согласования времени");
     }
 
   });
