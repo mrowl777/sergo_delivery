@@ -9,23 +9,26 @@ $(document).ready(function(){
     }else{
       $('input[name=sender_addr_man]').hide();
       var selected_city = $('input[name=city_selector_sender]:checked').val();
-      if( selected_city == '1' ){
-        $('.sndr[city=MSK]').hide();
-      }else{
-        $('.sndr[city=SPB]').hide();
-      }
+      console.log('city_selector_sender', selected_city);
+      // if( selected_city == '1' ){
+      //   $('.sndr[city=MSK]').hide();
+      // }else{
+      //   $('.sndr[city=SPB]').hide();
+      // }
     }
 
     if( recipient_type == '1' ){
       $('select[name=recipient_add]').hide();
     }else{
       $('input[name=recipient_addr_man]').hide();
-      var selected_city = $('input[name=city_selector_recipient]:checked').val();
-      if( selected_city == '1' ){
-        $('.rcpnt[city=MSK]').hide();
-      }else{
-        $('.rcpnt[city=SPB]').hide();
-      }
+      var recipient_city = $('input[name=city_selector_recipient]:checked').val();
+      console.log('city_selector_recipient', recipient_city);
+
+      // if( recipient_city == '1' ){
+      //   $('.rcpnt[city=MSK]').hide();
+      // }else{
+      //   $('.rcpnt[city=SPB]').hide();
+      // }
     }
     
   });
