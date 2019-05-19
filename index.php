@@ -40,7 +40,7 @@ mysqli_close( $mysqli );
     <div class="container">
     <div class="wrapper">
       <ul class="steps">
-        <li class="is-active">Шаг 1</li>
+        <li class="is-active">Шаг 1</li><?php echo $depataments[0]['city']; ?>
         <li>Шаг 2</li>
         <li>Шаг 3</li>
       </ul>
