@@ -142,7 +142,7 @@ mysqli_close( $mysqli );
             <p></p>
           </div>
 
-          <div>
+          <div style="margin-bottom: 50px;">
             <h2>Получатель</h2>
             <p id="result_recipient_fio">ФИО: </p>
             <p id="result_recipient_city">ГОРОД: </p>
