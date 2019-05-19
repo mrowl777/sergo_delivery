@@ -105,10 +105,9 @@ mysqli_close( $mysqli );
         </fieldset>
 
         <fieldset class="section">
-          <h3>Получатель</h3>
           <input type="text" name="sender_addr_man" id="sender_addr" placeholder="Адрес отправителя">
           
-          <select class="addr_selector" name="sender_addr">
+          <select class="addr_selector sndr_addr" name="sender_addr">
           <?php
               echo '<option disabled selected>Выберите пункт приема посылок</option>';
             foreach( $depataments as $each ){
@@ -118,7 +117,7 @@ mysqli_close( $mysqli );
           </select>
 
           <input type="text" name="recipient_addr_man" id="recipient_addr" placeholder="Адрес получателя">
-          <select class="addr_selector" name="recipient_addr">
+          <select class="addr_selector rcvr_addr" name="recipient_addr">
             <?php
                 echo '<option disabled selected>Выберите пункт выдачи посылок</option>';
               foreach( $depataments as $each ){

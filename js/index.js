@@ -52,13 +52,13 @@ $(document).ready(function(){
     var recipient_addr = $('input[name=recipient_addr_man]').val();
 
     if(!sender_addr || sender_addr == ''){
-      var sender_addr_title = $('input[name=sender_addr]').text();
-      sender_addr = $('input[name=sender_addr]').val();
+      var sender_addr_title = $('.sndr_addr').text();
+      sender_addr = $('.sndr_addr').val();
     }
 
     if(!recipient_addr || recipient_addr == ''){
-      var recipient_addr_title = $('input[name=recipient_addr]').text();
-      recipient_addr = $('input[name=sender_addr]').val();
+      var recipient_addr_title = $('.rcvr_addr').text();
+      recipient_addr = $('.rcvr_addr').val();
     }
 
     console.log('sender_first_name', sender_first_name);
