@@ -56,7 +56,31 @@ function get_address( $sender_delivery_type, $recipient_delivery_type ){
     return array( $sender_address, $recipient_address );
 }
 
+function get_departaments(){
 
+    $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
+    if ($mysqli->connect_errno) {
+        echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
+
+    $mysqli->query("set names utf8");
+
+    $departs = $mysqli->query( "SELECT * FROM `departs`" );
+
+    $depataments = [];
+
+    while ($row = $departs->fetch_assoc()) {
+        $depataments[$row["id"]] = $row["address"];
+    }
+
+    mysqli_close( $mysqli );
+
+    return $depataments;
+}
+
+$a=get_departaments();
+echo(var_dump($a));
 
 
 ?>
