@@ -28,8 +28,8 @@ class OrderHandler extends db_handler {
     
         list( $sender_address, $recipient_address ) = $this->get_address($sender_delivery_type,  $recipient_delivery_type );
 
-        $sid = $this->put_sender($sender_f_name,$sender_l_name,$sender_s_name,$sender_pass, $sender_delivery_type, $sender_address);
-        $rid = $this->put_recipient($recipient_f_name,$recipient_l_name,$recipient_surname, $recipient_delivery_type, $recipient_address, $recipient_phone);
+        $sid = $this->put_sender($sender_f_name,$sender_l_name,$sender_s_name,$sender_pass, $sender_delivery_type, $sender_city, $sender_address);
+        $rid = $this->put_recipient($recipient_f_name,$recipient_l_name,$recipient_surname, $recipient_delivery_type, $recipient_city, $recipient_address, $recipient_phone);
         
         $track = sha1($sid . $rid . time());
 
