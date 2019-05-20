@@ -165,5 +165,7 @@ $(document).ready(function(){
 });
 
 function on_answer( data ){
-  alert(data);
+  $('.result_data').hide();
+  $('#track_code').text(data);
+  $('.track_code').show();
 }

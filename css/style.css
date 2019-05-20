@@ -256,4 +256,16 @@ fieldset{
 .done{
   left: 22px !important;
   right: 75% !important;
+  background-color: #3498db;
+  display: inline-block;
+  padding: 8px 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px !important;
+  font-family: 'Open Sans', sans-serif !important;
+  position: absolute;
+  bottom: 20px;
+}
+.track_code{
+  display: none;
 }

@@ -121,25 +121,32 @@ class ParcelCreator extends db_handler {
         
         <fieldset class="section">
 
+          <div class="result_data">
+            <div>
+              <h2>Отправитель</h2>
+              <p id="result_sender_fio"></p>
+              <p id="result_sender_city"></p>
+              <p id="result_sender_address"></p>
+              <p id="result_sender_del_type"></p>
+            </div>
+
+            <div style="margin-bottom: 50px;">
+              <h2>Получатель</h2>
+              <p id="result_recipient_fio"></p>
+              <p id="result_recipient_city"></p>
+              <p id="result_recipient_phone"></p>
+              <p id="result_recipient_address"></p>
+              <p id="result_recipient_del_type"></p>
+            </div>
+
+            <div class="done">Все верно</div>
+            <div class="button">Начать с начала</div>
           <div>
-            <h2>Отправитель</h2>
-            <p id="result_sender_fio"></p>
-            <p id="result_sender_city"></p>
-            <p id="result_sender_address"></p>
-            <p id="result_sender_del_type"></p>
-          </div>
 
-          <div style="margin-bottom: 50px;">
-            <h2>Получатель</h2>
-            <p id="result_recipient_fio"></p>
-            <p id="result_recipient_city"></p>
-            <p id="result_recipient_phone"></p>
-            <p id="result_recipient_address"></p>
-            <p id="result_recipient_del_type"></p>
+          <div class="track_code">
+          <h2>Ваш номер отслеживания:</h2>
+          <h1 id="track_code"></h1>
           </div>
-
-          <div class="button done">Все верно</div>
-          <div class="button">Начать с начала</div>
         </fieldset>
       </form>
     </div>
