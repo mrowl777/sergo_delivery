@@ -72,7 +72,7 @@ class db_handler {
     }
 
     function put_parcel($sid, $rid, $track){
-        $query = "INSERT INTO `packets`(`id`, `sender_id`, `recipient_id`, `status`, `track`) VALUES ('','".$sid."','".$rid."','','".$track."')";
+        $query = "INSERT INTO `packets`(`id`, `sender_id`, `recipient_id`, `status`, `track`) VALUES ('','".$sid."','".$rid."','1','".$track."')";
         $db_helper = $this->connect_db();
         $db_helper->query( $query );
         $this->close_connection( $db_helper );
