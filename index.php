@@ -5,9 +5,10 @@ include 'db_handler.php';
 class ParcelCreator extends db_handler {
 
   function __construct() {
+    echo "ok";
     $depataments = $this->get_departaments();
   }
-  
+
 }
 
 ?>
