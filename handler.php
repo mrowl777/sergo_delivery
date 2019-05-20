@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . 'ini.php';
+include __DIR__ . '/ini.php';
 if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
     $sender_f_name = $_POST['sender_first_name'];
     $sender_l_name = $_POST['sender_last_name'];
