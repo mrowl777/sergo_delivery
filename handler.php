@@ -52,7 +52,7 @@ class OrderHandler extends db_handler {
         $recipient_city = $recipient['city'] == '1' ? 'Санкт-Петербург' : 'Москву';
         $sender_type = $sender['delivery_type'] == '1' ? 'Самовывоз' : ' Курьером';
         $recipient_type = $recipient['delivery_type'] == '1' ? 'Самовывоз' : ' Курьером';
-die($parcel['status']);
+die($status);
         $data = [
             'status' => $status,
             'sender_title' => $sender_title,
