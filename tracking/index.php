@@ -1,3 +1,11 @@
+<?php
+
+if( isset($_GET['track_code'])){
+  echo($_GET['track_code']);
+}
+
+?>
+
 <head>
     <title>Tracking</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
