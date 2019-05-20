@@ -1,8 +1,10 @@
 <?php
 
 class ParcelCreator extends db_handler {
-
-  $depataments = $this->get_departaments();
+  run();
+  function run(){
+    $depataments = $this->get_departaments();
+  }
 
 }
 
