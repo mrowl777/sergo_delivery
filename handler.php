@@ -8,12 +8,12 @@ include 'db_handler.php';
 //     return new MainHandler::get_parcel_data();
 // }
 
- new MainHandler::test();
+new MainHandler::test();
 
 class MainHandler extends db_handler {
 
 
-    function test(){
+    static function test(){
         die(var_dump($this->get_departaments( true )));
     }
 
