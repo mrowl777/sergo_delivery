@@ -5,7 +5,7 @@ include 'db_handler.php';
 class ParcelCreator extends db_handler {
 
   function __construct() {
-    $depataments = $this->get_departaments();
+    return $this->get_departaments();
   }
 
 }
@@ -96,6 +96,7 @@ class ParcelCreator extends db_handler {
           <select class="addr_selector sndr_addr" name="sender_addr">
           <?php
               echo '<option disabled selected>Выберите пункт приема посылок</option>';
+            $depataments = new ParcelCreator();
             foreach( $depataments as $each ){
               echo "<option class='sndr' value='".$each['id']."' city='".$each['city']."'>".$each['address']."</option>";
             }
@@ -106,6 +107,7 @@ class ParcelCreator extends db_handler {
           <select class="addr_selector rcvr_addr" name="recipient_addr">
             <?php
                 echo '<option disabled selected>Выберите пункт выдачи посылок</option>';
+              $depataments = new ParcelCreator();
               foreach( $depataments as $each ){
                 echo "<option class='rcpnt' value='".$each['id']."' city='".$each['city']."'>".$each['address']."</option>";
               }

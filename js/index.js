@@ -97,6 +97,17 @@ $(document).ready(function(){
 
   });
 
+  /*
+$.ajax({
+  type: "POST",
+  url: url,
+  data: data,
+  success: success,
+  dataType: dataType
+});
+
+  */
+
   $(".form-wrapper .button").click(function(){
     var button = $(this);
     var currentSection = button.parents(".section");

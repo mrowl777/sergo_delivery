@@ -9,7 +9,7 @@ class OrderHandler extends db_handler {
         return $this->get_departaments( true );
     }
 
-    function generate_parcel(){
+    function generate_parcel( $_POST ){
         $sender_f_name = $_POST['sender_first_name'];
         $sender_l_name = $_POST['sender_last_name'];
         $sender_s_name = $_POST['sender_surname'];
@@ -34,7 +34,7 @@ class OrderHandler extends db_handler {
     }
 
 
-    function get_parcel_data(){
+    function get_parcel_data( $_POST ){
         $track = $_POST['track_code'];
     }
 
@@ -68,12 +68,10 @@ class OrderHandler extends db_handler {
 $mh = new OrderHandler();
 
 if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
-    $mh->generate_parcel();
+    $mh->generate_parcel( $_POST );
 }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
-    $mh->get_parcel_data();
+    $mh->get_parcel_data( $_POST );
 }
 
-$a = $mh->get_points();
-echo(var_dump($a));
 ?>
 
