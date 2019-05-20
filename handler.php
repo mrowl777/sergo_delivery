@@ -8,8 +8,8 @@ include 'db_handler.php';
 //     return new MainHandler::get_parcel_data();
 // }
 $mh = new MainHandler();
-$a = $mh->get_points();
-echo(var_dump($a));
+// $a = $mh->get_points();
+// echo(var_dump($a));
 
 class MainHandler extends db_handler {
 
