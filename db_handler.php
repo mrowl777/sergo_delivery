@@ -21,7 +21,7 @@ class db_handler {
     function get_departaments( $simple_format = false){
 
         $db_helper = $this->connect_db();
-        $departs = $mysqli->query( "SELECT * FROM `departs`" );
+        $departs = $db_helper->query( "SELECT * FROM `departs`" );
         $this->close_connection( $db_helper );
     
         $depataments = [];
