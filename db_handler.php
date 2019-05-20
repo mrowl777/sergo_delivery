@@ -18,21 +18,27 @@ class db_handler {
         mysqli_close( $mysqli );
     }
 
-    function get_departaments(){
+    function get_departaments( $simple_format = false){
 
         $db_helper = $this->connect_db();
         $departs = $mysqli->query( "SELECT * FROM `departs`" );
         $this->close_connection( $db_helper );
     
         $depataments = [];
-    
-        while ($row = $departs->fetch_assoc()) {
-            $depataments[] = array(
-                'id' => $row["id"],
-                'city' => $row["city"],
-                'address' => $row["address"],
-            );
-        }
+
+        if( $simple_format ){
+            while ($row = $departs->fetch_assoc()) {
+                $depataments[$row["id"]] = $row["address"];
+            }
+        }else{
+            while ($row = $departs->fetch_assoc()) {
+                $depataments[] = array(
+                    'id' => $row["id"],
+                    'city' => $row["city"],
+                    'address' => $row["address"],
+                );
+            }
+        }    
     
         mysqli_close( $mysqli );
     
