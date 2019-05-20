@@ -2,12 +2,14 @@
 
 include 'db_handler.php';
 
-if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
-    return new MainHandler::generate_parcel();
-}elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
-    return new MainHandler::get_parcel_data();
-}
-return new MainHandler::test();
+// if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
+//     return new MainHandler::generate_parcel();
+// }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
+//     return new MainHandler::get_parcel_data();
+// }
+
+ new MainHandler::test();
+
 class MainHandler extends db_handler {
 
 
