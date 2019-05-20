@@ -7,11 +7,11 @@ include 'db_handler.php';
 // }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
 //     return new MainHandler::get_parcel_data();
 // }
-$mh = new MainHandler();
+$mh = new OrderHandler();
 // $a = $mh->get_points();
 // echo(var_dump($a));
 
-class MainHandler extends db_handler {
+class OrderHandler extends db_handler {
 
 
     function get_points() {
