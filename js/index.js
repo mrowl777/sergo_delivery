@@ -153,9 +153,7 @@ $(document).ready(function(){
             sender_del_type:sender_delivery_type,
             recipient_del_type:recipient_delivery_type,
             sender_departmet_point:sender_addr,
-            recipient_departmet_point:recipient_addr,
-            sender_address:sender_addr_title,
-            recipient_address:recipient_addr_title
+            recipient_departmet_point:recipient_addr
         },
         on_answer
       );

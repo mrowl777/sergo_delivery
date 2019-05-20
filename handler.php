@@ -46,23 +46,15 @@ class OrderHandler extends db_handler {
 
     function get_address( $sender_delivery_type, $recipient_delivery_type ){
         $depataments = $this->get_departaments( true );
-        if( $sender_delivery_type == '1' ){
-            $sender_address = $_POST['sender_departmet_point'];
-        }else{
-            $sender_address = $_POST['sender_address'];
-        }
 
-        if( $recipient_delivery_type == '1' ){
-            $recipient_address = $_POST['recipient_departmet_point'];
-        }else{
-            $recipient_address = $_POST['recipient_address'];
-        }
+        $sender_address = $_POST['sender_departmet_point'];
+        $recipient_address = $_POST['recipient_departmet_point'];
 
-        if( count($sender_address) == 1 ){
+        if( iconv_strlen($sender_address) == 1 ){
             $sender_address = $depataments[$sender_address]; 
         }
 
-        if( count($recipient_address) == 1 ){
+        if( iconv_strlen($recipient_address) == 1 ){
             $recipient_address = $depataments[$recipient_address]; 
         }
 
