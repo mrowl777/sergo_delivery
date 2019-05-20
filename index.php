@@ -123,22 +123,19 @@ class ParcelCreator extends db_handler {
 
           <div>
             <h2>Отправитель</h2>
-            <p id="result_sender_fio">ФИО: </p>
-            <p id="result_sender_city">ГОРОД: </p>
-            <p id="result_sender_address">Адрес: </p>
-            <p id="result_sender_del_type">Доставка: </p>
-            <p></p>
-            <p></p>
+            <p id="result_sender_fio"></p>
+            <p id="result_sender_city"></p>
+            <p id="result_sender_address"></p>
+            <p id="result_sender_del_type"></p>
           </div>
 
           <div style="margin-bottom: 50px;">
             <h2>Получатель</h2>
-            <p id="result_recipient_fio">ФИО: </p>
-            <p id="result_recipient_city">ГОРОД: </p>
-            <p id="result_recipient_phone">ТЕЛЕФОН: </p>
-            <p id="result_recipient_address">Адрес: </p>
+            <p id="result_recipient_fio"></p>
+            <p id="result_recipient_city"></p>
+            <p id="result_recipient_phone"></p>
+            <p id="result_recipient_address"></p>
             <p id="result_recipient_del_type"></p>
-            <p></p>
           </div>
 
           <div class="button done">Все верно</div>

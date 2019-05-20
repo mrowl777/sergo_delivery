@@ -65,48 +65,39 @@ $(document).ready(function(){
     var sender_fio = sender_last_name + " " + sender_first_name + " " + sender_surname;
     var recipient_fio = recipient_last_name + " " + recipient_first_name + " " + recipient_surname;
 
-    $('#result_sender_fio').text($('#result_sender_fio').text() + " " + sender_fio);
-    $('#result_recipient_fio').text($('#result_recipient_fio').text() + " " + recipient_fio);
-    $('#result_sender_city').text($('#result_sender_city').text() + " " + sender_city);
-    $('#result_recipient_city').text($('#result_recipient_city').text() + " " + recipient_city);
-    $('#result_recipient_phone').text($('#result_recipient_phone').text() + " " + recipient_phone);
+    $('#result_sender_fio').text("ФИО:  " + sender_fio);
+    $('#result_recipient_fio').text("ФИО:  " + recipient_fio);
+    $('#result_sender_city').text("ГОРОД: " + sender_city);
+    $('#result_recipient_city').text("ГОРОД: " + recipient_city);
+    $('#result_recipient_phone').text("ТЕЛЕФОН: " + recipient_phone);
     if(sender_addr_title && sender_addr_title !== '' ){
-      $('#result_sender_address').text($('#result_sender_address').text() + " " + sender_addr_title);
+      $('#result_sender_address').text("Адрес: " + sender_addr_title);
     }else{
-      $('#result_sender_address').text($('#result_sender_address').text() + " " + sender_addr);
+      $('#result_sender_address').text("Адрес: " + sender_addr);
     }
 
     if(recipient_addr_title && recipient_addr_title !== '' ){
-      $('#result_recipient_address').text($('#result_recipient_address').text() + " " + recipient_addr_title);
+      $('#result_recipient_address').text("Адрес: " + recipient_addr_title);
     }else{
-      $('#result_recipient_address').text($('#result_recipient_address').text() + " " + recipient_addr);
+      $('#result_recipient_address').text("Адрес: " + recipient_addr);
     }
 
 
     if( sender_delivery_type == "1"){
-      $('#result_sender_del_type').text($('#result_sender_del_type').text() + " самостоятельно на точку приема посылок");
+      $('#result_sender_del_type').text("Доставка: самостоятельно на точку приема посылок");
     }else{
-      $('#result_sender_del_type').text($('#result_sender_del_type').text() + " курьер свяжется для согласования времени");
+      $('#result_sender_del_type').text("Доставка: курьер свяжется для согласования времени");
     }
 
     if( recipient_delivery_type == "1"){
-      $('#result_recipient_del_type').text($('#result_recipient_del_type').text() + " забирает самостоятельно на точке приема посылок");
+      $('#result_recipient_del_type').text("Доставка: забирает самостоятельно на точке приема посылок");
     }else{
-      $('#result_recipient_del_type').text($('#result_recipient_del_type').text() + " курьер свяжется для согласования времени");
+      $('#result_recipient_del_type').text("Доставка: курьер свяжется для согласования времени");
     }
 
   });
 
-  /*
-$.ajax({
-  type: "POST",
-  url: url,
-  data: data,
-  success: success,
-  dataType: dataType
-});
 
-  */
 
   $(".form-wrapper .button").click(function(){
     var button = $(this);
@@ -125,4 +116,20 @@ $.ajax({
       $(document).find(".steps li").first().addClass("is-active");
     }
   });
+
+  $(".form-wrapper .done").click(function(){
+    
+
+      /*
+$.ajax({
+  type: "POST",
+  url: url,
+  data: data,
+  success: success,
+  dataType: dataType
+});
+
+  */
+  });
+
 });
