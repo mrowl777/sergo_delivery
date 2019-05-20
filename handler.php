@@ -9,7 +9,7 @@ class OrderHandler extends db_handler {
         return $this->get_departaments( true );
     }
 
-    function generate_parcel( $_POST ){
+    function generate_parcel(){
         $sender_f_name = $_POST['sender_f_name'];
         $sender_l_name = $_POST['sender_l_name'];
         $sender_s_name = $_POST['sender_s_name'];
@@ -26,7 +26,7 @@ class OrderHandler extends db_handler {
         $sender_delivery_type = $_POST['sender_del_type'];
         $recipient_delivery_type = $_POST['recipient_del_type'];
     
-        list( $sender_address, $recipient_address ) = $this->get_address( $_POST, $sender_delivery_type,  $recipient_delivery_type );
+        list( $sender_address, $recipient_address ) = $this->get_address($sender_delivery_type,  $recipient_delivery_type );
         
         die(var_dump($_POST));
         /**fullfill parcel data to db */
@@ -35,23 +35,23 @@ class OrderHandler extends db_handler {
     }
 
 
-    function get_parcel_data( $_POST ){
+    function get_parcel_data(){
         $track = $_POST['track_code'];
     }
 
 
-    function get_address( $post, $sender_delivery_type, $recipient_delivery_type ){
+    function get_address( $sender_delivery_type, $recipient_delivery_type ){
         $depataments = $this->get_departaments( true );
         if( $sender_delivery_type == '1' ){
-            $sender_address = $post['sender_departmet_point'];
+            $sender_address = $_POST['sender_departmet_point'];
         }else{
-            $sender_address = $post['sender_address'];
+            $sender_address = $_POST['sender_address'];
         }
 
         if( $recipient_delivery_type == '1' ){
-            $recipient_address = $post['recipient_departmet_point'];
+            $recipient_address = $_POST['recipient_departmet_point'];
         }else{
-            $recipient_address = $post['recipient_address'];
+            $recipient_address = $_POST['recipient_address'];
         }
 
         if( count($sender_address) == 1 ){
@@ -69,9 +69,9 @@ class OrderHandler extends db_handler {
 $mh = new OrderHandler();
 
 if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
-    $mh->generate_parcel( $_POST );
+    $mh->generate_parcel();
 }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
-    $mh->get_parcel_data( $_POST );
+    $mh->get_parcel_data();
 }
 
 ?>
