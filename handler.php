@@ -14,7 +14,7 @@ class MainHandler extends db_handler {
 
 
     function get_points() {
-        $depataments = $this->get_departaments( true );
+        return $this->get_departaments( true );
     }
 
     function generate_parcel(){
