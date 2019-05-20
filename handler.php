@@ -13,7 +13,10 @@ $mh = new OrderHandler();
 
 class OrderHandler extends db_handler {
 
-
+    public function __construct() {
+        echo "I've just been created!";
+    }
+        
     function get_points() {
         return $this->get_departaments( true );
     }
