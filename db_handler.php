@@ -81,17 +81,9 @@ class db_handler {
     function get_parcel($track){
         $query = "SELECT `id`, `sender_id`, `recipient_id`, `status` FROM `packets` WHERE `track` = '".$track."'";
         $db_helper = $this->connect_db();
-        $data = $db_helper->query( $query );
+        $parcel = $db_helper->query( $query );
         $this->close_connection( $db_helper );
-        $parcel = [];
-        while ($row = $data->fetch_assoc()) {
-            $parcel[] = array(
-                'id' => $row["id"],
-                'sender_id' => $row["sender_id"],
-                'recipient_id' => $row["recipient_id"],
-                'status' => $row["status"],
-            );
-        }
+        $parcel->fetch_assoc();
         return $parcel;
     }
     
