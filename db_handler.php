@@ -88,36 +88,20 @@ class db_handler {
     }
     
     function get_sender($id){
-        $query = "SELECT `first_name`, `last_name`, `surname`, `passport`, `delivery_type`, `City`, `date`, `adress` FROM `senders` WHERE `id` = '".$id."'";
+        $query = "SELECT `first_name`, `last_name`, `delivery_type`, `City` FROM `senders` WHERE `id` = '".$id."'";
         $db_helper = $this->connect_db();
         $data = $db_helper->query( $query );
         $this->close_connection( $db_helper );
-        $sender = [];
-        while ($row = $data->fetch_assoc()) {
-            $sender[] = array(
-                'first_name' => $row["first_name"],
-                'last_name' => $row["last_name"],
-                'city' => $row["City"],
-                'delivery_type' => $row["delivery_type"],
-            );
-        }
+        $sender = $sender->fetch_assoc();
         return $sender;
     }
 
     function get_recipient($id){
         $query = "SELECT  `first_name`, `last_name`, `delivery_type`, `city` FROM `recipients` WHERE `id` = '".$id."'";
         $db_helper = $this->connect_db();
-        $data = $db_helper->query( $query );
+        $sender = $db_helper->query( $query );
         $this->close_connection( $db_helper );
-        $sender = [];
-        while ($row = $data->fetch_assoc()) {
-            $sender[] = array(
-                'first_name' => $row["first_name"],
-                'last_name' => $row["last_name"],
-                'city' => $row["City"],
-                'delivery_type' => $row["delivery_type"],
-            );
-        }
+        $sender = $sender->fetch_assoc();
         return $sender;
     }
 

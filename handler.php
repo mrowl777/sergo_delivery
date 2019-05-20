@@ -48,7 +48,7 @@ class OrderHandler extends db_handler {
         $status = $this->get_normal_status($parcel['status']);
         $sender_title = $sender['last_name'] . " " . $sender['first_name'];
         $recipient_title = $recipient['last_name'] . " " . $recipient['first_name'];
-        $sender_city = $sender['city'] == '1' ? 'Санкт-Петербурга' : 'Москвы';
+        $sender_city = $sender['City'] == '1' ? 'Санкт-Петербурга' : 'Москвы';
         $recipient_city = $recipient['city'] == '1' ? 'Санкт-Петербург' : 'Москву';
         $sender_type = $sender['delivery_type'] == '1' ? 'Самовывоз' : ' Курьером';
         $recipient_type = $recipient['delivery_type'] == '1' ? 'Самовывоз' : ' Курьером';
