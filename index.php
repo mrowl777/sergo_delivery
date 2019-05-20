@@ -1,5 +1,5 @@
 <?php
-
+include 'db_handler.php';
 class ParcelCreator extends db_handler {
   function __construct() {
     $this->run();
