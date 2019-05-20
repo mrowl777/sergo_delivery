@@ -10,6 +10,7 @@ class OrderHandler extends db_handler {
     }
 
     function generate_parcel(){
+        die($_POST);
         $sender_f_name = $_POST['sender_f_name'];
         $sender_l_name = $_POST['sender_l_name'];
         $sender_s_name = $_POST['sender_s_name'];

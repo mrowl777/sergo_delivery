@@ -43,9 +43,9 @@ class db_handler {
         return $depataments;
     }
 
-    function put_sender($fn,$ln,$sn,$ps,$dt,$ct){
+    function put_sender($fn,$ln,$sn,$ps,$dt,$ct, $ad){
         $query_fields = "INSERT INTO `senders`(`id`, `first_name`, `last_name`, `surname`, `passport`, `delivery_type`, `City`, `date`, `adress`) VALUES ";
-        $query_vals = "('','".$fn."','".$ln."','".$sn."','".$ps."','".$dt."','".$ct."','','".$ad."')";
+        $query_vals = "('','".$fn."','".$ln."','".$sn."','".$ps."','".$dt."','".$ct."', CURRENT_TIMESTAMP ,'".$ad."')";
         $db_helper = $this->connect_db();
         $db_helper->query( $query_fields . $query_vals );
 
@@ -57,9 +57,9 @@ class db_handler {
         return $uid['id'];
     }
 
-    function put_recipient($fn,$ln,$sn,$dt,$ct,$ph){
+    function put_recipient($fn,$ln,$sn,$dt,$ct, $ad,$ph){
         $query_fields = "INSERT INTO `recipients`(`id`, `first_name`, `last_name`, `surname`, `delivery_type`, `city`, `address`, `phone`) VALUES ";
-        $query_vals = "('','".$fn."','".$ln."','".$sn."','".$dt."','".$ct."','','".$ad."', '".$ph."')";
+        $query_vals = "('','".$fn."','".$ln."','".$sn."','".$dt."','".$ct."',".$ad."', '".$ph."')";
         $db_helper = $this->connect_db();
         $db_helper->query( $query_fields . $query_vals );
 
