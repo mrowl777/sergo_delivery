@@ -83,7 +83,7 @@ class db_handler {
         $db_helper = $this->connect_db();
         $parcel = $db_helper->query( $query );
         $this->close_connection( $db_helper );
-        $parcel->fetch_assoc();
+        $parcel = $parcel->fetch_assoc();
         return $parcel;
     }
     
