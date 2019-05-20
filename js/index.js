@@ -164,7 +164,6 @@ $(document).ready(function(){
 
 function on_answer( data ){
   $('.result_data').hide();
-  // $('#track_code').text(data);
   $('#track_code').append( "<a href='/sergo_delivery/tracking?track_code="+data+"'>"+data+"</p>" );
   $('.track_code').show();
 }

@@ -41,6 +41,29 @@ class OrderHandler extends db_handler {
 
     function get_parcel_data(){
         $track = $_POST['track_code'];
+        $parcel = $this->get_parcel($track);
+        $sender = get_sender($parcel['sender_id']);
+        $recipient = get_recipient($parcel['recipient_id']);
+
+        $status = $this->get_normal_status($parcel['status']);
+        $sender_title = $sender['last_name'] . " " . $sender['first_name'];
+        $recipient_title = $recipient['last_name'] . " " . $recipient['first_name'];
+        $sender_city = $sender['city'] == '1' ? 'Санкт-Петербурга' : 'Москвы';
+        $recipient_city = $recipient['city'] == '1' ? 'Санкт-Петербург' : 'Москву';
+        $sender_type = $sender['delivery_type'] == '1' ? 'Самовывоз' : ' Курьером';
+        $recipient_type = $recipient['delivery_type'] == '1' ? 'Самовывоз' : ' Курьером';
+
+        $data = [
+            'status' => $status,
+            'sender_title' => $sender_title,
+            'sender_city' => $sender_city,
+            'sender_type' => $sender_type,
+            'recipient_title' => $recipient_title,
+            'recipient_city' => $recipient_city,
+            'recipient_type' => $recipient_type
+        ];
+
+        die(json_encode($data));
     }
 
 

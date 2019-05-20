@@ -16,12 +16,35 @@ function init(){
 
   $( input ).on( 'keyup', function keyup( e ) {
     if( e.keyCode == 13 ){
-      alert(input.val());
+      get_data(input.val());
     }
   });
+
+  var GET = window.location.search.replace( '?', ''); 
+  if( GET ){
+    var arr = GET.split('=');
+    var code = arr[1];
+    if(code && code != ''){
+      get_data( code );
+    }
+  }
+
 }
 
+function get_data( code ){
+  $.post(
+    "../handler.php",
+    {
+        action: "get_parcel",
+        track_code: code
+    },
+    on_answer
+  );
+}
 
+function on_answer(data){
+  alert(data);
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     init();

@@ -77,6 +77,67 @@ class db_handler {
         $db_helper->query( $query );
         $this->close_connection( $db_helper );
     }
+
+    function get_parcel($track){
+        $query = "SELECT `id`, `sender_id`, `recipient_id`, `status` FROM `packets` WHERE `track` = '".$track."'";
+        $db_helper = $this->connect_db();
+        $data = $db_helper->query( $query );
+        $this->close_connection( $db_helper );
+        $parcel = [];
+        while ($row = $data->fetch_assoc()) {
+            $parcel[] = array(
+                'id' => $row["id"],
+                'sender_id' => $row["sender_id"],
+                'recipient_id' => $row["recipient_id"],
+                'status' => $row["status"],
+            );
+        }
+        return $parcel;
+    }
+    
+    function get_sender($id){
+        $query = "SELECT `first_name`, `last_name`, `surname`, `passport`, `delivery_type`, `City`, `date`, `adress` FROM `senders` WHERE `id` = '".$id."'";
+        $db_helper = $this->connect_db();
+        $data = $db_helper->query( $query );
+        $this->close_connection( $db_helper );
+        $sender = [];
+        while ($row = $data->fetch_assoc()) {
+            $sender[] = array(
+                'first_name' => $row["first_name"],
+                'last_name' => $row["last_name"],
+                'city' => $row["City"],
+                'delivery_type' => $row["delivery_type"],
+            );
+        }
+        return $sender;
+    }
+
+    function get_recipient($id){
+        $query = "SELECT  `first_name`, `last_name`, `delivery_type`, `city` FROM `recipients` WHERE `id` = '".$id."'";
+        $db_helper = $this->connect_db();
+        $data = $db_helper->query( $query );
+        $this->close_connection( $db_helper );
+        $sender = [];
+        while ($row = $data->fetch_assoc()) {
+            $sender[] = array(
+                'first_name' => $row["first_name"],
+                'last_name' => $row["last_name"],
+                'city' => $row["City"],
+                'delivery_type' => $row["delivery_type"],
+            );
+        }
+        return $sender;
+    }
+
+    function get_normal_status($id){
+        $query = "SELECT `status` FROM `statuses` WHERE `id` = '".$id."'";
+        $db_helper = $this->connect_db();
+        $sender = $db_helper->query( $query );
+        $this->close_connection( $db_helper );
+        $sender = $sender->fetch_assoc();
+        return $sender['status'];
+    }
+
     
 
 }
