@@ -59,7 +59,7 @@ class db_handler {
 
     function put_recipient($fn,$ln,$sn,$dt,$ct, $ad,$ph){
         $query_fields = "INSERT INTO `recipients`(`id`, `first_name`, `last_name`, `surname`, `delivery_type`, `city`, `address`, `phone`) VALUES ";
-        $query_vals = "('','".$fn."','".$ln."','".$sn."','".$dt."','".$ct."',".$ad."', '".$ph."')";
+        $query_vals = "('','".$fn."','".$ln."','".$sn."','".$dt."','".$ct."','".$ad."', '".$ph."')";
         $db_helper = $this->connect_db();
         $db_helper->query( $query_fields . $query_vals );
 
