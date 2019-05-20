@@ -8,13 +8,11 @@ include 'db_handler.php';
 //     return new MainHandler::get_parcel_data();
 // }
 
-die(var_dump(db_handler::get_departaments( true )));
-
 class MainHandler extends db_handler {
 
 
-    static function test(){
-        die(var_dump($this->get_departaments( true )));
+    function __construct() {
+        $depataments = $this->get_departaments( true );
     }
 
     function generate_parcel(){
@@ -73,4 +71,7 @@ class MainHandler extends db_handler {
     }
 
 }
+
+echo(var_dump($depataments));
 ?>
+
