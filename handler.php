@@ -4,14 +4,14 @@ include 'db_handler.php';
 
 class MainHandler extends db_handler {
 
-    function __construct() {
+    // function __construct() {
         if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
             $this->generate_parcel();
         }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
             $this->get_parcel_data();
         }
         $this->test();
-    }
+    // }
 
     function test(){
         die(var_dump($this->get_departaments( true )));
