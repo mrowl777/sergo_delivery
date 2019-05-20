@@ -90,7 +90,7 @@ class db_handler {
     function get_sender($id){
         $query = "SELECT `first_name`, `last_name`, `delivery_type`, `City` FROM `senders` WHERE `id` = '".$id."'";
         $db_helper = $this->connect_db();
-        $data = $db_helper->query( $query );
+        $sender = $db_helper->query( $query );
         $this->close_connection( $db_helper );
         $sender = $sender->fetch_assoc();
         return $sender;
@@ -99,19 +99,19 @@ class db_handler {
     function get_recipient($id){
         $query = "SELECT  `first_name`, `last_name`, `delivery_type`, `city` FROM `recipients` WHERE `id` = '".$id."'";
         $db_helper = $this->connect_db();
-        $sender = $db_helper->query( $query );
+        $recipient = $db_helper->query( $query );
         $this->close_connection( $db_helper );
-        $sender = $sender->fetch_assoc();
-        return $sender;
+        $recipient = $recipient->fetch_assoc();
+        return $recipient;
     }
 
     function get_normal_status($id){
         $query = "SELECT `status` FROM `statuses` WHERE `id` = '".$id."'";
         $db_helper = $this->connect_db();
-        $sender = $db_helper->query( $query );
+        $status = $db_helper->query( $query );
         $this->close_connection( $db_helper );
-        $sender = $sender->fetch_assoc();
-        return $sender['status'];
+        $status = $sender->fetch_assoc();
+        return $status['status'];
     }
 
     
