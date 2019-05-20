@@ -2,12 +2,6 @@
 
 include 'db_handler.php';
 
-// if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
-//     return new MainHandler::generate_parcel();
-// }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
-//     return new MainHandler::get_parcel_data();
-// }
-
 
 class OrderHandler extends db_handler {
 
@@ -75,9 +69,14 @@ class OrderHandler extends db_handler {
     }
 }
 
-
-
 $mh = new OrderHandler();
+
+if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
+    $mh->generate_parcel();
+}elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
+    $mh->get_parcel_data();
+}
+
 $a = $mh->get_points();
 echo(var_dump($a));
 ?>

@@ -2,7 +2,7 @@
 class db_handler {
 
     function connect_db(){
-        include __DIR__ . '/../ini.php';
+        include __DIR__ . '/ini.php';
         
         $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
