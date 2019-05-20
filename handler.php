@@ -10,24 +10,25 @@ class OrderHandler extends db_handler {
     }
 
     function generate_parcel( $_POST ){
-        $sender_f_name = $_POST['sender_first_name'];
-        $sender_l_name = $_POST['sender_last_name'];
-        $sender_s_name = $_POST['sender_surname'];
+        $sender_f_name = $_POST['sender_f_name'];
+        $sender_l_name = $_POST['sender_l_name'];
+        $sender_s_name = $_POST['sender_s_name'];
         $sender_pass = $_POST['sender_passport'];
-        $sender_city = $_POST['sender_city'];
+        $sender_city = $_POST['sender_city_'];
         
     
-        $recipient_f_name = $_POST['recipient_first_name'];
-        $recipient_l_name = $_POST['recipient_last_name'];
-        $recipient_surname = $_POST['recipient_surname'];
-        $recipient_phone = $_POST['recipient_phone'];
-        $recipient_city = $_POST['recipient_city'];
+        $recipient_f_name = $_POST['recipient_f_name'];
+        $recipient_l_name = $_POST['recipient_l_name'];
+        $recipient_surname = $_POST['recipient_s_name'];
+        $recipient_phone = $_POST['recipient_number'];
+        $recipient_city = $_POST['recipient_city_'];
     
-        $sender_delivery_type = $_POST['sender_delivery_type'];
-        $recipient_delivery_type = $_POST['recipient_delivery_type'];
+        $sender_delivery_type = $_POST['sender_del_type'];
+        $recipient_delivery_type = $_POST['recipient_del_type'];
     
-        list( $sender_address, $recipient_address ) = $this->get_address( $sender_delivery_type,  $recipient_delivery_type );
+        list( $sender_address, $recipient_address ) = $this->get_address( $_POST, $sender_delivery_type,  $recipient_delivery_type );
         
+        die(var_dump($_POST));
         /**fullfill parcel data to db */
     
         /***generate, insert, return track-code */
@@ -39,18 +40,18 @@ class OrderHandler extends db_handler {
     }
 
 
-    function get_address( $sender_delivery_type, $recipient_delivery_type ){
+    function get_address( $post, $sender_delivery_type, $recipient_delivery_type ){
         $depataments = $this->get_departaments( true );
         if( $sender_delivery_type == '1' ){
-            $sender_address = $_POST['sender_departmet_point'];
+            $sender_address = $post['sender_departmet_point'];
         }else{
-            $sender_address = $_POST['sender_address'];
+            $sender_address = $post['sender_address'];
         }
 
         if( $recipient_delivery_type == '1' ){
-            $recipient_address = $_POST['sender_departmet_point'];
+            $recipient_address = $post['recipient_departmet_point'];
         }else{
-            $recipient_address = $_POST['recipient_address'];
+            $recipient_address = $post['recipient_address'];
         }
 
         if( count($sender_address) == 1 ){

@@ -135,18 +135,35 @@ $(document).ready(function(){
   });
 
   $(".form-wrapper .done").click(function(){
-    
-
-      /*
-$.ajax({
-  type: "POST",
-  url: url,
-  data: data,
-  success: success,
-  dataType: dataType
-});
-
-  */
+    if(confirm("Вы уверены в правильности данных?")){
+      $.post(
+        "handler.php",
+        {
+            action: "new_parcel",
+            sender_f_name: sender_first_name, 
+            sender_l_name:sender_last_name,
+            sender_s_name:sender_surname,
+            sender_passport:sender_pass,
+            sender_city_:sender_city,
+            recipient_f_name:recipient_first_name,
+            recipient_l_name:recipient_last_name,
+            recipient_s_name:recipient_surname,
+            recipient_number:recipient_phone,
+            recipient_city_:recipient_city,
+            sender_del_type:sender_delivery_type,
+            recipient_del_type:recipient_delivery_type,
+            sender_departmet_point:sender_addr,
+            recipient_departmet_point:recipient_addr,
+            sender_address:sender_addr_title,
+            recipient_address:recipient_addr_title
+        },
+        on_answer
+      );
+    }
   });
 
 });
+
+function on_answer( data ){
+  alert(data);
+}
