@@ -145,7 +145,7 @@ class ParcelCreator extends db_handler {
 
           <div class="track_code">
             <h2>Ваш номер отслеживания:</h2>
-            <h1 id="track_code"></h1>
+            <h2 id="track_code"></h2>
           </div>
         </fieldset>
       </form>
