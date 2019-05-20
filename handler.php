@@ -7,11 +7,13 @@ include 'db_handler.php';
 // }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
 //     return new MainHandler::get_parcel_data();
 // }
-
+$MainHandler = new MainHandler();
+$a = $MainHandler->get_points();
+echo(var_dump($a));
 class MainHandler extends db_handler {
 
 
-    function __construct() {
+    function get_points() {
         $depataments = $this->get_departaments( true );
     }
 
@@ -69,8 +71,6 @@ class MainHandler extends db_handler {
 
         return array( $sender_address, $recipient_address );
     }
-
-    echo(var_dump($depataments));
 }
 
 ?>
