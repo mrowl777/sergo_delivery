@@ -7,9 +7,10 @@ include 'db_handler.php';
 // }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
 //     return new MainHandler::get_parcel_data();
 // }
-$MainHandler = new MainHandler();
-$a = $MainHandler->get_points();
+$mh = new MainHandler();
+$a = $mh->get_points();
 echo(var_dump($a));
+
 class MainHandler extends db_handler {
 
 
