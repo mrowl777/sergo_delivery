@@ -1,26 +1,11 @@
 <?php
-include __DIR__ . '/ini.php';
 
-$mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
+class ParcelCreator extends db_handler {
 
-if ($mysqli->connect_errno) {
-    echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
-$mysqli->query("set names utf8");
+  $depataments = $this->get_departaments();
 
-$departs = $mysqli->query( "SELECT * FROM `departs`" );
-
-$depataments = [];
-
-while ($row = $departs->fetch_assoc()) {
-  $depataments[] = array(
-      'id' => $row["id"],
-      'city' => $row["city"],
-      'address' => $row["address"],
-  );
 }
 
-mysqli_close( $mysqli );
 ?>
 
 
