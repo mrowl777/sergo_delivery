@@ -110,7 +110,7 @@ class db_handler {
         $db_helper = $this->connect_db();
         $status = $db_helper->query( $query );
         $this->close_connection( $db_helper );
-        $status = $sender->fetch_assoc();
+        $status = $status->fetch_assoc();
         return $status['status'];
     }
 
