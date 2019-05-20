@@ -27,11 +27,15 @@ class OrderHandler extends db_handler {
         $recipient_delivery_type = $_POST['recipient_del_type'];
     
         list( $sender_address, $recipient_address ) = $this->get_address($sender_delivery_type,  $recipient_delivery_type );
+
+        $sid = $this->put_sender($sender_f_name,$sender_l_name,$sender_s_name,$sender_pass, $sender_delivery_type, $sender_address);
+        $rid = $this->put_recipient($recipient_f_name,$recipient_l_name,$recipient_surname, $recipient_delivery_type, $recipient_address, $recipient_phone);
         
-        die(var_dump($_POST));
-        /**fullfill parcel data to db */
-    
-        /***generate, insert, return track-code */
+        $track = sha1($sid . $rid . time());
+
+        $this->put_parcel($sid, $rid, $track);
+
+        die($track);
     }
 
 
