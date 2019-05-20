@@ -54,7 +54,7 @@ class OrderHandler extends db_handler {
         $recipient_type = $recipient['delivery_type'] == '1' ? 'Самовывоз' : ' Курьером';
 
         $data = [
-            'status' => $status,
+            'status' => $parcel['status'],
             'sender_title' => $sender_title,
             'sender_city' => $sender_city,
             'sender_type' => $sender_type,
