@@ -1,3 +1,20 @@
+var sender_first_name, 
+    sender_last_name,
+    sender_surname,
+    sender_pass,
+    sender_city,
+    recipient_first_name,
+    recipient_last_name,
+    recipient_surname,
+    recipient_phone,
+    recipient_city,
+    sender_delivery_type,
+    recipient_delivery_type,
+    sender_addr,
+    recipient_addr,
+    sender_addr_title,
+    recipient_addr_title;
+
 $(document).ready(function(){
   $('.deltype').click(function(){
     var sender_type = $('input[name=sender_type]:checked').val();
@@ -32,32 +49,32 @@ $(document).ready(function(){
   });
 
   $('.summary').click(function(){
-    var sender_first_name = $('input[name=sender_f_name]').val();
-    var sender_last_name = $('input[name=sender_l_name]').val();
-    var sender_surname = $('input[name=sender_s_name]').val();
-    var sender_pass = $('input[name=sender_pass]').val();
-    var sender_city = $('.city_sndr').val();
+    sender_first_name = $('input[name=sender_f_name]').val();
+    sender_last_name = $('input[name=sender_l_name]').val();
+    sender_surname = $('input[name=sender_s_name]').val();
+    sender_pass = $('input[name=sender_pass]').val();
+    sender_city = $('.city_sndr').val();
 
-    var recipient_first_name = $('input[name=f_name]').val();
-    var recipient_last_name = $('input[name=l_name]').val();
-    var recipient_surname = $('input[name=s_name]').val();
-    var recipient_phone = $('input[name=phone]').val();
-    var recipient_city = $('.city_rcvr').val();
+    recipient_first_name = $('input[name=f_name]').val();
+    recipient_last_name = $('input[name=l_name]').val();
+    recipient_surname = $('input[name=s_name]').val();
+    recipient_phone = $('input[name=phone]').val();
+    recipient_city = $('.city_rcvr').val();
 
-    var sender_delivery_type = $('input[name=sender_type]:checked').val();
-    var recipient_delivery_type = $('input[name=recipient_type]:checked').val();
+    sender_delivery_type = $('input[name=sender_type]:checked').val();
+    recipient_delivery_type = $('input[name=recipient_type]:checked').val();
 
 
-    var sender_addr = $('input[name=sender_addr_man]').val();
-    var recipient_addr = $('input[name=recipient_addr_man]').val();
+    sender_addr = $('input[name=sender_addr_man]').val();
+    recipient_addr = $('input[name=recipient_addr_man]').val();
 
     if(!sender_addr || sender_addr == ''){
-      var sender_addr_title = $('.sndr_addr option:selected').text();
+      sender_addr_title = $('.sndr_addr option:selected').text();
       sender_addr = $('.sndr_addr').val();
     }
 
     if(!recipient_addr || recipient_addr == ''){
-      var recipient_addr_title = $('.rcvr_addr option:selected').text();
+      recipient_addr_title = $('.rcvr_addr option:selected').text();
       recipient_addr = $('.rcvr_addr').val();
     }
 
