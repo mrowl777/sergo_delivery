@@ -51,7 +51,7 @@ class db_handler {
 
         $query = "SELECT `id` FROM `senders` WHERE  `first_name` = '".$fn."' AND `last_name` = '".$ln."' AND `passport` = '".$ps."'";
         $uid = $db_helper->query( $query );
-        $uid = $uid->fetch_assoc()
+        $uid = $uid->fetch_assoc();
         $this->close_connection( $db_helper );
 
         return $uid['id'];
@@ -65,7 +65,7 @@ class db_handler {
 
         $query = "SELECT `id` FROM `recipients` WHERE  `first_name` = '".$fn."' AND `last_name` = '".$ln."' AND  `phone` ='".$ph."'";
         $uid = $db_helper->query( $query );
-        $uid = $uid->fetch_assoc()
+        $uid = $uid->fetch_assoc();
         $this->close_connection( $db_helper );
 
         return $uid['id'];
