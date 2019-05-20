@@ -39,9 +39,7 @@ class db_handler {
                 );
             }
         }    
-    
-        mysqli_close( $mysqli );
-    
+
         return $depataments;
     }
     
