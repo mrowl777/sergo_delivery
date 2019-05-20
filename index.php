@@ -1,7 +1,9 @@
 <?php
 
 class ParcelCreator extends db_handler {
-  run();
+  function __construct() {
+    $this->run();
+  }
   function run(){
     $depataments = $this->get_departaments();
   }
