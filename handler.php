@@ -70,8 +70,8 @@ class MainHandler extends db_handler {
         return array( $sender_address, $recipient_address );
     }
 
+    echo(var_dump($depataments));
 }
 
-echo(var_dump($depataments));
 ?>
 
