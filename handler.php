@@ -42,8 +42,8 @@ class OrderHandler extends db_handler {
     function get_parcel_data(){
         $track = $_POST['track_code'];
         $parcel = $this->get_parcel($track);
-        $sender = get_sender($parcel['sender_id']);
-        $recipient = get_recipient($parcel['recipient_id']);
+        $sender = $this->get_sender($parcel['sender_id']);
+        $recipient = $this->get_recipient($parcel['recipient_id']);
 
         $status = $this->get_normal_status($parcel['status']);
         $sender_title = $sender['last_name'] . " " . $sender['first_name'];
