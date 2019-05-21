@@ -16,15 +16,6 @@
     $pc = new ParcelManager();
     $parcels = $pc->get_parcels();
     $stats = $pc->get_statuses();
-
-    // function get_status( $id ){
-    //     $pc = new ParcelManager();
-    //     $stats = $pc->get_statuses();
-    //     if( isset($stats[$id]) ){
-    //         return $stats[$id];
-    //     }
-    //     return 'Ошибка получения статуса';
-    // }
 ?>
 
 <html >

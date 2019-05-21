@@ -34,3 +34,7 @@ table.cinereousTable thead th {
 table.cinereousTable thead th:first-child {
     border-left: none;
 }
+option{
+    padding: 7px;
+    background: transparent;
+}
