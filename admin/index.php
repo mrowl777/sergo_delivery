@@ -1,6 +1,6 @@
 <?php
 
-include 'db_handler.php';
+include '../db_handler.php';
 
 class ParcelManager extends db_handler {
 
