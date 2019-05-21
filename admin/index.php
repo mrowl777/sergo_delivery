@@ -27,7 +27,7 @@
 
 <body>
     <?php
-    foreach( $parcels as $each ){
+    foreach( $parcels as $key => $each ){
         echo $each['recipient_fio'];
     }
     ?>
