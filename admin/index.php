@@ -15,6 +15,14 @@
 
     $pc = new ParcelManager();
     $parcels = $pc->get_parcels();
+
+    function get_status( $id ){
+        $stats = $pc->get_statuses();
+        if( isset($stats[$id]) ){
+            return $stats[$id];
+        }
+        return 'Ошибка получения статуса'ж
+    }
 ?>
 
 <html >
@@ -43,7 +51,7 @@
         <tbody>
         <?php
             foreach( $parcels as $each  ){
-                echo "<tr id='"."'>";
+                echo "<tr id='".$each['parcel_id']."'>";
                 echo "<td>" . $each['sender_fio'] . "</td>";
                 echo "<td>" . $each['sender_passport'] . "</td>";
                 echo "<td>" . $each['sender_city'] . "</td>";
@@ -52,7 +60,7 @@
                 echo "<td>" . $each['recipient_phone'] . "</td>";
                 echo "<td>" . $each['recipient_city'] . "</td>";
                 echo "<td>" . $each['recipient_address'] . "</td>";
-                echo "<td>" . $each['status'] . "</td>";
+                echo "<td>" . get_status( $each['status'] ) . "</td>";
                 echo "</tr>";
             }
         ?>
