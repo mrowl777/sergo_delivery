@@ -16,7 +16,6 @@ class ParcelManager extends db_handler {
 $pc = new ParcelManager();
 $parcels = $pc->get_parcels();
 
-die(var_dump($parcels));
 ?>
 
 
@@ -47,19 +46,19 @@ die(var_dump($parcels));
         </thead>
         <tbody>
         <?php
-        foreach( $parcels as $id => $parcel )
-            echo "<tr id='".$id."'>";
-            echo "<td>".$parcel['sender_fio']."</td>";
-            echo "<td>".$parcel['sender_passport']."</td>";
-            echo "<td>".$parcel['sender_city']."</td>";
-            echo "<td>".$parcel['sender_address']."</td>";
-            echo "<td>".$parcel['recipient_fio']."</td>";
-            echo "<td>".$parcel['recipient_phone']."</td>";
-            echo "<td>".$parcel['recipient_city']."</td>";
-            echo "<td>".$parcel['recipient_address']."</td>";
-            echo "<td>".$parcel['status']."</td>";
-            echo "</tr>";
-        ?>
+            foreach( $parcels as $id => $parcel )
+                echo "<tr id='".$id."'>";
+                echo "<td>".$parcel['sender_fio']."</td>";
+                echo "<td>".$parcel['sender_passport']."</td>";
+                echo "<td>".$parcel['sender_city']."</td>";
+                echo "<td>".$parcel['sender_address']."</td>";
+                echo "<td>".$parcel['recipient_fio']."</td>";
+                echo "<td>".$parcel['recipient_phone']."</td>";
+                echo "<td>".$parcel['recipient_city']."</td>";
+                echo "<td>".$parcel['recipient_address']."</td>";
+                echo "<td>".$parcel['status']."</td>";
+                echo "</tr>";
+            ?>
         </tbody>
         </tr>
     </table>
