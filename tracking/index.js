@@ -62,8 +62,8 @@ function on_answer(data){
 
   status.text(obj.status);
 
-  $('.search').hide();
-  $('.data_block').show();
+  $('.search').hide(500);
+  $('.data_block').show(500);
 
 }
 
