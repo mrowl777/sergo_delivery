@@ -16,7 +16,7 @@ class ParcelCreator extends db_handler {
 <html >
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Interactive Form</title>
+  <title>Оформление</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>

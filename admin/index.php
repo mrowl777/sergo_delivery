@@ -1,30 +1,26 @@
 <?php
 
-include '../db_handler.php';
+    include '../db_handler.php';
 
-class ParcelManager extends db_handler {
+    class ParcelManager extends db_handler {
 
-    function get_parcels() {
-        return $this->get_parcels_data();
+        function get_parcels() {
+            return $this->get_parcels_data();
+        }
+
+        function get_stats(){
+            return $this->get_statuses();
+        }
     }
 
-    function get_stats(){
-        return $this->get_statuses();
-    }
-}
-
-$pc = new ParcelManager();
-$parcels = $pc->get_parcels();
-
+    $pc = new ParcelManager();
+    $parcels = $pc->get_parcels();
 ?>
-
-
-
 
 <html >
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Interactive Form</title>
+  <title>Admin panel</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
