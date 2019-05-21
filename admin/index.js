@@ -5,7 +5,7 @@ function init(){
         var _id = $(this).parent().parent().attr('id');
 
         $.post(
-            "handler.php",
+            "../handler.php",
             {
                 action: "update_status",
                 id: _id,
