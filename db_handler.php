@@ -133,10 +133,10 @@ class db_handler {
         $data = [];
         while ($row = $parcels->fetch_assoc()) {
             $sid = $row['sender_id'];
-            $rid $_POST['id'], $_POST['status']= $row['recipient_id'];
-            $quer$_POST['id'], $_POST['status']y = "SELECT `first_name`, `last_name`, `surname`, `passport`, `delivery_type`, `City`, `adress` FROM `senders` WHERE `id` = '".$sid."'";
-            $send$_POST['id'], $_POST['status']er = $db_helper->query( $query );
-            $send$_POST['id'], $_POST['status']er = $sender->fetch_assoc();
+            $rid = $row['recipient_id'];
+            $query = "SELECT `first_name`, `last_name`, `surname`, `passport`, `delivery_type`, `City`, `adress` FROM `senders` WHERE `id` = '".$sid."'";
+            $sender = $db_helper->query( $query );
+            $sender = $sender->fetch_assoc();
 
 
             $sender_fio = $sender['last_name'] . " " . $sender['first_name']. " " . $sender['surname'];
