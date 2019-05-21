@@ -44,15 +44,15 @@ function get_data( code ){
 
 function on_answer(data){
   var obj = $.parseJSON(data);
-  var sender_name = ('#sender_title');
-  var sender_city = ('#sender_city');
-  var sender_del = ('#sender_delivery');
+  var sender_name = $('#sender_title');
+  var sender_city = $('#sender_city');
+  var sender_del = $('#sender_delivery');
 
-  var recipient_name = ('#recipient_title');
-  var recipient_city = ('#recipient_city');
-  var recipient_delivery = ('#recipient_delivery');
+  var recipient_name = $('#recipient_title');
+  var recipient_city = $('#recipient_city');
+  var recipient_delivery = $('#recipient_delivery');
 
-  var status = ('#status');
+  var status = $('#status');
 
   sender_name.text(obj.sender_title);
   sender_city.text(obj.sender_city);
