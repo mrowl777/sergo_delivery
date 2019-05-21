@@ -83,6 +83,11 @@ class OrderHandler extends db_handler {
 
         return array( $sender_address, $recipient_address );
     }
+
+    function update_status(){
+        $this->put_status($_POST['id'], $_POST['status']);
+        die('ok');
+    }
 }
 
 $mh = new OrderHandler();
@@ -91,6 +96,8 @@ if( isset($_POST) && $_POST['action'] == 'new_parcel' ){
     $mh->generate_parcel();
 }elseif( isset($_POST) && $_POST['action'] == 'get_parcel' ){
     $mh->get_parcel_data();
+}elseif( isset($_POST) && $_POST['action'] == 'update_status' ){
+    $mh->update_status();
 }
 
 ?>
