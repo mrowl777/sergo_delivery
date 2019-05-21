@@ -17,14 +17,14 @@
     $parcels = $pc->get_parcels();
     $stats = $pc->get_statuses();
 
-    function get_status( $id ){
-        $pc = new ParcelManager();
-        $stats = $pc->get_statuses();
-        if( isset($stats[$id]) ){
-            return $stats[$id];
-        }
-        return 'Ошибка получения статуса';
-    }
+    // function get_status( $id ){
+    //     $pc = new ParcelManager();
+    //     $stats = $pc->get_statuses();
+    //     if( isset($stats[$id]) ){
+    //         return $stats[$id];
+    //     }
+    //     return 'Ошибка получения статуса';
+    // }
 ?>
 
 <html >
@@ -62,8 +62,7 @@
                 echo "<td>" . $each['recipient_phone'] . "</td>";
                 echo "<td>" . $each['recipient_city'] . "</td>";
                 echo "<td>" . $each['recipient_address'] . "</td>";
-                // echo "<td>" . get_status( $each['status'] ) . "</td>";
-                echo "<select>";
+                echo "<td><select>";
                 foreach( $stats as $id => $status  ){
                     $selected = '';
                     if( $id == $each['status'] ){
@@ -71,7 +70,7 @@
                     }
                     echo "<option value='".$id."' ".$selected.">" . $status . "</option>";
                 }
-                echo "</select>";
+                echo "</select></td>";
                 echo "</tr>";
             }
         ?>
