@@ -26,7 +26,21 @@
 </head>
 
 <body>
-    <table class="cinereousTable">
+    <?php
+            foreach( $parcels as $id => $parcel )
+                echo "<tr id='".$id."'>";
+                echo "<td>".$parcel['sender_fio']."</td>";
+                echo "<td>".$parcel['sender_passport']."</td>";
+                echo "<td>".$parcel['sender_city']."</td>";
+                echo "<td>".$parcel['sender_address']."</td>";
+                echo "<td>".$parcel['recipient_fio']."</td>";
+                echo "<td>".$parcel['recipient_phone']."</td>";
+                echo "<td>".$parcel['recipient_city']."</td>";
+                echo "<td>".$parcel['recipient_address']."</td>";
+                echo "<td>".$parcel['status']."</td>";
+                echo "</tr>";
+            ?>
+    <!-- <table class="cinereousTable">
         <thead>
             <tr>
                 <th>Отправитель</th>
@@ -56,7 +70,7 @@
                 echo "</tr>";
             ?>
         </tbody>
-    </table>
+    </table> -->
 
   <script src='../jquery-3.4.0.js'></script>
   <script src="index.js"></script>
