@@ -82,11 +82,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  width: 380px;
   color: #eee;
   font-size: 1.3em;
 }
-.data_block div > p{
-  float: left;
-  margin-right: 35%;
+.data_block div {
+  display: flex;
+  justify-content: space-between;
 }

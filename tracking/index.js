@@ -51,7 +51,6 @@ function on_answer(data){
   var recipient_city = $('#recipient_city');
   var recipient_delivery = $('#recipient_delivery');
   var status = $('#status');
-  var info_block = $('.data_block');
 
   sender_name.text(obj.sender_title);
   sender_city.text(obj.sender_city);
@@ -63,8 +62,8 @@ function on_answer(data){
 
   status.text(obj.status);
 
-  info_block.show();
   $('.search').hide();
+  $('.data_block').show();
 
 }
 
