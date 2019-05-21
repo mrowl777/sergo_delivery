@@ -34,7 +34,3 @@ table.cinereousTable thead th {
 table.cinereousTable thead th:first-child {
     border-left: none;
 }
-
-table.cinereousTable tfoot td {
-    font-size: 16px;
-}  

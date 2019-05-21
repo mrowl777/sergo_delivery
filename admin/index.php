@@ -28,22 +28,21 @@
 <body>
     <table class="cinereousTable">
         <thead>
-        <tr>
-            <th>Отправитель</th>
-            <th>Паспорт</th>
-            <th>Город</th>
-            <th>Адрес</th>
-            <th>Получатель</th>
-            <th>Телефон</th>
-            <th>Город</th>
-            <th>Адрес</th>
-            <th>Статус</th>
-        </tr>
+            <tr>
+                <th>Отправитель</th>
+                <th>Паспорт</th>
+                <th>Город</th>
+                <th>Адрес</th>
+                <th>Получатель</th>
+                <th>Телефон</th>
+                <th>Город</th>
+                <th>Адрес</th>
+                <th>Статус</th>
+            </tr>
         </thead>
         <tbody>
         <?php
             foreach( $parcels as $id => $parcel )
-            var_dump($parcel);
                 echo "<tr id='".$id."'>";
                 echo "<td>".$parcel['sender_fio']."</td>";
                 echo "<td>".$parcel['sender_passport']."</td>";
@@ -57,7 +56,6 @@
                 echo "</tr>";
             ?>
         </tbody>
-        </tr>
     </table>
 
   <script src='../jquery-3.4.0.js'></script>
