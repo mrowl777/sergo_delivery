@@ -47,12 +47,11 @@ function on_answer(data){
   var sender_name = $('#sender_title');
   var sender_city = $('#sender_city');
   var sender_del = $('#sender_delivery');
-
   var recipient_name = $('#recipient_title');
   var recipient_city = $('#recipient_city');
   var recipient_delivery = $('#recipient_delivery');
-
   var status = $('#status');
+  var info_block = $('.data_block');
 
   sender_name.text(obj.sender_title);
   sender_city.text(obj.sender_city);
@@ -63,6 +62,9 @@ function on_answer(data){
   recipient_delivery.text(obj.recipient_type);
 
   status.text(obj.status);
+
+  info_block.show();
+  $('.search').hide();
 
 }
 
