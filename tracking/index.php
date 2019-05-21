@@ -16,31 +16,31 @@
 
     <div class="data_block">
     <div>
-        Отправитель:<div id="sender_title"></div>
+        <p>Отправитель:</p><div id="sender_title"></div>
     </div>
     <div>
-        Отправление из:<div id="sender_city"></div>
+        <p>Отправление из:</p><div id="sender_city"></div>
     </div>
     <div>
-        Доставка:<div  id="sender_delivery"></div>
-    </div>
-
-    <br/><br/>
-
-    <div>
-        Получатель:<div id="recipient_title"></div>
-    </div>
-    <div>
-        Отправление в:<div id="recipient_city"></div>
-    </div>
-    <div>
-        Доставка:<div id="recipient_delivery"></div>
+        <p>Доставка:</p><div  id="sender_delivery"></div>
     </div>
 
     <br/><br/>
 
     <div>
-        Cтатус:<div id="status"> </div>
+        <p>Получатель:</p><div id="recipient_title"></div>
+    </div>
+    <div>
+        <p>Отправление в:</p><div id="recipient_city"></div>
+    </div>
+    <div>
+        <p>Доставка:</p><div id="recipient_delivery"></div>
+    </div>
+
+    <br/><br/>
+
+    <div>
+        <p>Cтатус:<div id="status"> </div>
     </div>
     
     </div>
