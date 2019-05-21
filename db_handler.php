@@ -114,7 +114,83 @@ class db_handler {
         return $status['status'];
     }
 
-    
+    function get_statuses(){
+        $query = "SELECT * FROM `statuses` WHERE 1";
+        $db_helper = $this->connect_db();
+        $statuses = $db_helper->query( $query );
+        $this->close_connection( $db_helper );
+        $data = [];
+        while ($row = $departs->fetch_assoc()) {
+            $data[$row["id"]] = $row["status"];
+        }
+        return $data;
+    }
+
+    function get_parcels_data(){
+        $query = "SELECT * FROM `packets` WHERE 1";
+        $db_helper = $this->connect_db();
+        $parcels = $db_helper->query( $query );
+        $data = [];
+        while ($row = $parcels->fetch_assoc()) {
+            $sid = $row['sender_id'];
+            $rid = $row['recipient_id'];
+            $query = "SELECT `first_name`, `last_name`, `surname`, `passport`, `delivery_type`, `City`, `adress` FROM `senders` WHERE `id` = '".$sid."'";
+            $sender = $db_helper->query( $query );
+            $sender = $sender->fetch_assoc();
+
+
+            $sender_fio = $sender['last_name'] . " " . $sender['first_name']. " " . $sender['surname'];
+            
+            if( $sender['delivery_type'] == 1 ){
+                $sender_address = 'Cамовывоз: ' . $sender['adress'];
+            }else{
+                $sender_address = 'Доставка: ' . $sender['adress'];
+            }
+
+            $sender_city = $this->build_address($sender['City']);
+
+
+            $query = "SELECT `first_name`, `last_name`, `surname`, `delivery_type`, `city`, `address`, `phone` FROM `recipients` WHERE `id` = '"$rid"'";
+            $recipient = $db_helper->query( $query );
+            $recipient = $recipient->fetch_assoc();
+
+            $recipient_fio = $recipient['last_name'] . " " . $recipient['first_name']. " " . $recipient['surname'];
+            $recipient_city = $this->build_address($recipient['City']);
+
+
+            if( $recipient['delivery_type'] == 1 ){
+                $recipient_address = 'Cамовывоз: ' . $recipient['address'];
+            }else{
+                $recipient_address = 'Доставка: ' . $recipient['address'];
+            }
+
+            $data[] = [
+                'sender_fio' => $sender_fio,
+                'recipient_fio' => $recipient_fio,
+                'sender_city' => $sender_city,
+                'recipient_city' => $recipient_city,
+                'sender_passport' => $sender['passport'],
+                'recipient_phone' => $recipient['phone'],
+                'sender_address' => $sender_address,
+                'recipient_address' => $recipient_address,
+                'status' => $row['status']
+            ];
+        }
+
+        $this->close_connection( $db_helper );
+
+        return $data;
+        
+    }
+
+    function build_address( $target ){
+        if($target == 1){
+            $city = 'Санкт-Петербург';
+        }else{
+            $city = 'Москва';
+        }
+        return $city;
+    }
 
 }
 
