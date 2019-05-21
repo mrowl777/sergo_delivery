@@ -15,6 +15,7 @@
 
     $pc = new ParcelManager();
     $parcels = $pc->get_parcels();
+    $stats = $pc->get_statuses();
 
     function get_status( $id ){
         $pc = new ParcelManager();
@@ -61,7 +62,16 @@
                 echo "<td>" . $each['recipient_phone'] . "</td>";
                 echo "<td>" . $each['recipient_city'] . "</td>";
                 echo "<td>" . $each['recipient_address'] . "</td>";
-                echo "<td>" . get_status( $each['status'] ) . "</td>";
+                // echo "<td>" . get_status( $each['status'] ) . "</td>";
+                echo "<select>";
+                foreach( $stats as $id => $status  ){
+                    $selected = '';
+                    if( $id == $each['status'] ){
+                        $selected = 'selected';
+                    }
+                    echo "<option value='".$id."' ".$selected.">" . $status . "</option>";
+                }
+                echo "</select>";
                 echo "</tr>";
             }
         ?>
