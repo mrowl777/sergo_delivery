@@ -26,7 +26,11 @@
 </head>
 
 <body>
-    <table class="cinereousTable">
+<?php
+    foreach( $parcels as $each  )
+        echo "<td>" . $each['recipient_fio'] . "</td>";
+?>
+    <!-- <table class="cinereousTable">
         <thead>
             <tr>
                 <th>Отправитель</th>
@@ -42,21 +46,21 @@
         </thead>
         <tbody>
         <?php
-            foreach( $parcels as $each  )
-                echo "<tr id='"."'>";
-                echo "<td>".$each['sender_fio']."</td>";
-                echo "<td>".$each['sender_passport']."</td>";
-                echo "<td>".$each['sender_city']."</td>";
-                echo "<td>".$each['sender_address']."</td>";
-                echo "<td>".$each['recipient_fio']."</td>";
-                echo "<td>".$each['recipient_phone']."</td>";
-                echo "<td>".$each['recipient_city']."</td>";
-                echo "<td>".$each['recipient_address']."</td>";
-                echo "<td>".$each['status']."</td>";
-                echo "</tr>";
-            ?>
+            // foreach( $parcels as $each  )
+            //     echo "<tr id='"."'>";
+            //     echo "<td>" . $each['sender_fio'] . "</td>";
+            //     echo "<td>" . $each['sender_passport'] . "</td>";
+            //     echo "<td>" . $each['sender_city'] . "</td>";
+            //     echo "<td>" . $each['sender_address'] . "</td>";
+            //     echo "<td>" . $each['recipient_fio'] . "</td>";
+            //     echo "<td>" . $each['recipient_phone'] . "</td>";
+            //     echo "<td>" . $each['recipient_city'] . "</td>";
+            //     echo "<td>" . $each['recipient_address'] . "</td>";
+            //     echo "<td>" . $each['status'] . "</td>";
+            //     echo "</tr>";
+        ?>
         </tbody>
-    </table>
+    </table> -->
 
   <script src='../jquery-3.4.0.js'></script>
   <script src="index.js"></script>
