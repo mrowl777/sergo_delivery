@@ -27,19 +27,8 @@
 
 <body>
     <?php
-            foreach( $parcels as $id => $parcel )
-                // echo "<tr id='".$id."'>";
-                echo $parcel['sender_fio'] ;
-                echo $parcel['sender_passport'];
-                echo $parcel['sender_city'];
-                echo $parcel['sender_address'];
-                echo $parcel['recipient_fio'];
-                echo $parcel['recipient_phone'];
-                echo $parcel['recipient_city'];
-                echo $parcel['recipient_address'];
-                echo $parcel['status'];
-                // echo "</tr>";
-            ?>
+    var_dump($parcels);
+    ?>
     <!-- <table class="cinereousTable">
         <thead>
             <tr>
