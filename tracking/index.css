@@ -85,7 +85,7 @@
   color: #eee;
   font-size: 1.3em;
 }
-.data_block > div > p{
+.data_block div > p{
   float: left;
   margin-right: 35%;
 }
