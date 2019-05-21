@@ -17,6 +17,7 @@
     $parcels = $pc->get_parcels();
 
     function get_status( $id ){
+        $pc = new ParcelManager();
         $stats = $pc->get_statuses();
         if( isset($stats[$id]) ){
             return $stats[$id];
