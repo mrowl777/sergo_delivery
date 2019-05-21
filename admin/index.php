@@ -43,6 +43,7 @@
         <tbody>
         <?php
             foreach( $parcels as $id => $parcel )
+            var_dump($parcel);
                 echo "<tr id='".$id."'>";
                 echo "<td>".$parcel['sender_fio']."</td>";
                 echo "<td>".$parcel['sender_passport']."</td>";
