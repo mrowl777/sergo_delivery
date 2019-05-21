@@ -150,7 +150,7 @@ class db_handler {
             $sender_city = $this->build_address($sender['City']);
 
 
-            $query = "SELECT `first_name`, `last_name`, `surname`, `delivery_type`, `city`, `address`, `phone` FROM `recipients` WHERE `id` = '"$rid"'";
+            $query = "SELECT `first_name`, `last_name`, `surname`, `delivery_type`, `city`, `address`, `phone` FROM `recipients` WHERE `id` = '".$rid."'";
             $recipient = $db_helper->query( $query );
             $recipient = $recipient->fetch_assoc();
 
