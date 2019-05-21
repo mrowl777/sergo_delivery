@@ -42,8 +42,8 @@
         </thead>
         <tbody>
         <?php
-            foreach( $parcels as $key => $each  )
-                echo "<tr id='".$key."'>";
+            foreach( $parcels as $each  )
+                echo "<tr id='"."'>";
                 echo "<td>".$each['sender_fio']."</td>";
                 echo "<td>".$each['sender_passport']."</td>";
                 echo "<td>".$each['sender_city']."</td>";
