@@ -43,7 +43,27 @@ function get_data( code ){
 }
 
 function on_answer(data){
-  alert(data);
+  var obj = $.parseJSON(data);
+  var sender_name = ('#sender_title');
+  var sender_city = ('#sender_city');
+  var sender_del = ('#sender_delivery');
+
+  var recipient_name = ('#recipient_title');
+  var recipient_city = ('#recipient_city');
+  var recipient_delivery = ('#recipient_delivery');
+
+  var status = ('#status');
+
+  sender_name.text(obj.sender_title);
+  sender_city.text(obj.sender_city);
+  sender_del.text(obj.sender_type);
+
+  recipient_name.text(obj.recipient_title);
+  recipient_city.text(obj.recipient_city);
+  recipient_delivery.text(obj.recipient_type);
+
+  status.text(obj.status);
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {
