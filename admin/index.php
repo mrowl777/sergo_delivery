@@ -21,7 +21,7 @@
         if( isset($stats[$id]) ){
             return $stats[$id];
         }
-        return 'Ошибка получения статуса'ж
+        return 'Ошибка получения статуса';
     }
 ?>
 
