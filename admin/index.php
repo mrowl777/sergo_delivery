@@ -27,7 +27,9 @@
 
 <body>
     <?php
-    var_dump($parcels);
+    foreach( $parcels as $each ){
+        echo $aech['recipient_fio'];
+    }
     ?>
     <!-- <table class="cinereousTable">
         <thead>
