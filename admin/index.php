@@ -28,17 +28,17 @@
 <body>
     <?php
             foreach( $parcels as $id => $parcel )
-                echo "<tr id='".$id."'>";
-                echo "<td>".$parcel['sender_fio']."</td>";
-                echo "<td>".$parcel['sender_passport']."</td>";
-                echo "<td>".$parcel['sender_city']."</td>";
-                echo "<td>".$parcel['sender_address']."</td>";
-                echo "<td>".$parcel['recipient_fio']."</td>";
-                echo "<td>".$parcel['recipient_phone']."</td>";
-                echo "<td>".$parcel['recipient_city']."</td>";
-                echo "<td>".$parcel['recipient_address']."</td>";
-                echo "<td>".$parcel['status']."</td>";
-                echo "</tr>";
+                // echo "<tr id='".$id."'>";
+                echo $parcel['sender_fio']."<br/>";
+                echo $parcel['sender_passport']."<br/>";
+                echo $parcel['sender_city']."<br/>";
+                echo $parcel['sender_address']."<br/>";
+                echo $parcel['recipient_fio']."<br/>";
+                echo $parcel['recipient_phone']."<br/>";
+                echo $parcel['recipient_city']."<br/>";
+                echo $parcel['recipient_address']."<br/>";
+                echo $parcel['status']."<br/>";
+                // echo "</tr>";
             ?>
     <!-- <table class="cinereousTable">
         <thead>
@@ -56,18 +56,18 @@
         </thead>
         <tbody>
         <?php
-            foreach( $parcels as $id => $parcel )
-                echo "<tr id='".$id."'>";
-                echo "<td>".$parcel['sender_fio']."</td>";
-                echo "<td>".$parcel['sender_passport']."</td>";
-                echo "<td>".$parcel['sender_city']."</td>";
-                echo "<td>".$parcel['sender_address']."</td>";
-                echo "<td>".$parcel['recipient_fio']."</td>";
-                echo "<td>".$parcel['recipient_phone']."</td>";
-                echo "<td>".$parcel['recipient_city']."</td>";
-                echo "<td>".$parcel['recipient_address']."</td>";
-                echo "<td>".$parcel['status']."</td>";
-                echo "</tr>";
+            // foreach( $parcels as $id => $parcel )
+            //     echo "<tr id='".$id."'>";
+            //     echo "<td>".$parcel['sender_fio']."</td>";
+            //     echo "<td>".$parcel['sender_passport']."</td>";
+            //     echo "<td>".$parcel['sender_city']."</td>";
+            //     echo "<td>".$parcel['sender_address']."</td>";
+            //     echo "<td>".$parcel['recipient_fio']."</td>";
+            //     echo "<td>".$parcel['recipient_phone']."</td>";
+            //     echo "<td>".$parcel['recipient_city']."</td>";
+            //     echo "<td>".$parcel['recipient_address']."</td>";
+            //     echo "<td>".$parcel['status']."</td>";
+            //     echo "</tr>";
             ?>
         </tbody>
     </table> -->
