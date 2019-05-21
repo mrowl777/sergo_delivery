@@ -120,7 +120,7 @@ class db_handler {
         $statuses = $db_helper->query( $query );
         $this->close_connection( $db_helper );
         $data = [];
-        while ($row = $departs->fetch_assoc()) {
+        while ($row = $statuses->fetch_assoc()) {
             $data[$row["id"]] = $row["status"];
         }
         return $data;
