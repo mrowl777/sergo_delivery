@@ -164,7 +164,7 @@ class db_handler {
                 $recipient_address = 'Доставка: ' . $recipient['address'];
             }
 
-            $data[] = [
+            $data[$parcel['id']] = [
                 'sender_fio' => $sender_fio,
                 'recipient_fio' => $recipient_fio,
                 'sender_city' => $sender_city,
