@@ -28,6 +28,7 @@
 <body>
 <?php
     foreach( $parcels as $each  )
+    echo 'each<br/>';
         echo $each['recipient_fio'] ;
 ?>
     <!-- <table class="cinereousTable">
