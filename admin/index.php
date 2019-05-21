@@ -28,7 +28,7 @@
 <body>
     <?php
     foreach( $parcels as $each ){
-        echo $aech['recipient_fio'];
+        echo $each['recipient_fio'];
     }
     ?>
     <!-- <table class="cinereousTable">
